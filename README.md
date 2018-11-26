@@ -1,4 +1,4 @@
-# Hackintosh Installation Guide for Gigabyte Z390 Aorus Master
+# Hackintosh Mojave Installation Guide for Gigabyte Z390 Aorus Master
 
 This build is "Vanilla". I used [this guide](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/) as a starting point.
 
