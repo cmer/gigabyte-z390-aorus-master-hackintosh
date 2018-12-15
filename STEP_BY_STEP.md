@@ -24,7 +24,9 @@ That's it! I literally didn't change anything else and it just worked. However, 
 
 These are all Mac utilities. Therefore, you need access to a real Mac.
 
+* [Clover Installer](https://github.com/Dids/clover-builder/releases)
 * [Clover Configurator](https://mackie100projects.altervista.org/download-clover-configurator/)
+* [IOJones](https://sourceforge.net/projects/iojones/)
 * [FB-Patcher](https://www.insanelymac.com/forum/topic/335018-intel-fb-patcher-v166/)
 
 ## Creating a Bootable USB Installation Drive
@@ -65,7 +67,7 @@ As of this writing, we need a special, unreleased, patched `AppleALC.kext` file 
 
 * Copy the patched `AppleALC.kext` file to `/EFI/CLOVER/kexts/Other`.
 
-We also need `UsbInjectAll.kext` which I believe is included in the Clover installer. I like to [download the latest version of UsbInjectAll here](https://bitbucket.org/RehabMan/os-x-usb-inject-all/downloads/) instead.
+We also need `UsbInjectAll.kext` which is not included in the Clover installer. I like to [download the latest version of UsbInjectAll here](https://bitbucket.org/RehabMan/os-x-usb-inject-all/downloads/).
 
 * Copy `UsbInjectAll.kext` (release version, NOT debug) to `/EFI/CLOVER/kexts/Other`.
 
