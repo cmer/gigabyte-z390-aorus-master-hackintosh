@@ -15,7 +15,7 @@ See my [Hardware List](HARDWARE.md)
 - APFS
 - Sleep/Wake (a bit slow though, can take up to 15 seconds to wake up)
 - All USB ports
-- 
+
 ##### Not Working (yet!)
 - WI-FI. This will likely never work since it is the new Intel CNVi that MacOS doesn't support.
 - Quicklook/Preview (need to fix iGPU)
