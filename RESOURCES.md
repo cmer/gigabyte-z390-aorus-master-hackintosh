@@ -19,10 +19,10 @@ Good thread where the author documents his many experiments, failures and succes
 
 ##### [How to set custom Framebuffer for Radeon RX 580](https://www.tonymacx86.com/threads/updated-storks-thunderbolt-build-i5-3570k-ga-z77x-up5-th-gtx-760.73112/page-99#post-1857755)
 
+##### [A great Kext repo](https://1drv.ms/f/s!AiP7m5LaOED-m-J8-MLJGnOgAqnjGw)
+
 
 
 ### Misc
 
 * HS14 is Bluetooth
-* [Untested DSDT for Z390 Aorus Master](https://www.insanelymac.com/forum/topic/336767-gigabyte-z390-aorus-master-request-for-help-with-dsdt/?tab=comments#comment-2652273
-* )

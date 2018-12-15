@@ -72,18 +72,26 @@ We need a few Kexts to get our installation working as it should:
     - As of this writing, we need a special, unreleased, patched `AppleALC.kext` file to get onboard audio working. I recommend you simply grab the one I include in this guide. Find it at `/MY EFI/CLOVER/kexts/Other`
 * [USBInjectAll.kext](https://bitbucket.org/RehabMan/os-x-usb-inject-all/downloads/)
     - This is necessary to exclude our onboard Bluetooth adapter (HS14).
-*  [IntelMausiEthernet.kext](https://bitbucket.org/RehabMan/os-x-intel-network/downloads/)
+* [IntelMausiEthernet.kext](https://bitbucket.org/RehabMan/os-x-intel-network/downloads/)
     -  This is for our onboard LAN adapter
-*  [Lilu.kext](https://github.com/acidanthera/Lilu/releases)
+* [Lilu.kext](https://github.com/acidanthera/Lilu/releases)
     -  Arbitrary kext and process patching on macOS
-*  [WhateverGreen.kext](https://github.com/acidanthera/WhateverGreen/releases)
+* [WhateverGreen.kext](https://github.com/acidanthera/WhateverGreen/releases)
     -  Various patches necessary for certain ATI/AMD/Intel/Nvidia GPUs
-*  [VirtualSMC.kext](https://github.com/acidanthera/VirtualSMC/releases)
+* [VirtualSMC.kext](https://github.com/acidanthera/VirtualSMC/releases)
     - Advanced Apple SMC emulator in the kernel
+* [NoVPAJpeg.kext](https://github.com/vulgo/NoVPAJpeg/releases)
+    - This is a kext we're using TEMPORARILY to get Quicklook/Preview working. iGPU is known to now work properly on Z390 boards yet. Hopefully we can remove this in the future.
 
 
 
-## Patching Things Up (not yet working)
+
+
+
+
+## Patching Things Up (not yet working -- skip this section)
+
+**NOTE**: I still can't get my iGPU to work in headless mode. Do not follow the instructions below.
 
 Here we are going to enable our iGPU for good.
 
