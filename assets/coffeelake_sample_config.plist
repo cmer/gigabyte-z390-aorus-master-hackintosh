@@ -263,7 +263,7 @@
     <key>CsrActiveConfig</key>
     <string>0x3E7</string>
     <key>MLB</key>
-    <string>{{GENERATE ME}}</string>
+    <string></string>
     <key>ROM</key>
     <string>UseMacAddr0</string>
   </dict>

@@ -47,6 +47,10 @@ Here's a [great explanation of the Clover settings for Coffee Lake](https://hack
     - Click the button with an up/down arrow (middle right). Chose `iMac18,3`. This is important since we'll be connecting our monitor to the RX580. The HDMI port on our motherboard is NOT yet working for Hackintoshes.
     - Make sure the serial number generated is an iMac (mid-2017) by clicking `Model Lookup`. 
     - Ensure that `Check Coverage` reports that the serial is **NOT** valid. You don't want to use somebody else's serial number.
+    - While you're here, copy your Board Serial Number to your clipboard. You'll need it soon.
+* In **Rt Variables**:
+    - Paste your Board Serial Number in the `MLB` field.
+    - Set `CsrActiveConfig` to `0x0` which enables SIP for extra security. This should work just fine for a Vanilla Hackintosh install and is how genuine Macs ship.
 * In **Boot**:
     - Change the `Custom Flags` to: `shikigva=40 uia_exclude=HS14` (this disables onboard Bluetooth since we'll be using an external Broadcom Wi-Fi/Bluetooth adapter)
 * In **ACPI**:
@@ -54,24 +58,32 @@ Here's a [great explanation of the Clover settings for Coffee Lake](https://hack
         + `Change GFX0 to IGPU` -- this enables iGPU as headless for Quicklooks/Preview to work. More on this later. 
 * In **Devices**:
     - Set `Inject` to `16`. This is a special id for our patched, unreleased `AppleALC.kext` file (discussed below). This makes your audio work.
-* In **Rt Variables**:
-    - Set `CsrActiveConfig` to `0x0` which enables SIP for extra security. This should work just fine for a Vanilla Hackintosh install and is how genuine Macs ship.
+
 * Click the Export Configuration button (bottom left), then Save As `config.plist`.
 * Copy your newly generated `config.plist` to `/EFI/CLOVER/` on your bootable USB key.
 
 ## Kexts
 
-Most Kexts we need are included with the Clover installer. 
+All Kexts should be copied to `/EFI/CLOVER/kexts/Other`. Whenever copying kexts from an online source, always make sure to copy the **Release** version (as opposed to Debug) if both are included in your download.
 
-As of this writing, we need a special, unreleased, patched `AppleALC.kext` file to get onboard audio working. It can be found in the `assets` directory.
+We need a few Kexts to get our installation working as it should:
 
-* Copy the patched `AppleALC.kext` file to `/EFI/CLOVER/kexts/Other`.
+* AppleALC.kext
+    - As of this writing, we need a special, unreleased, patched `AppleALC.kext` file to get onboard audio working. I recommend you simply grab the one I include in this guide. Find it at `/MY EFI/CLOVER/kexts/Other`
+* [USBInjectAll.kext](https://bitbucket.org/RehabMan/os-x-usb-inject-all/downloads/)
+    - This is necessary to exclude our onboard Bluetooth adapter (HS14).
+*  [IntelMausiEthernet.kext](https://bitbucket.org/RehabMan/os-x-intel-network/downloads/)
+    -  This is for our onboard LAN adapter
+*  [Lilu.kext](https://github.com/acidanthera/Lilu/releases)
+    -  Arbitrary kext and process patching on macOS
+*  [WhateverGreen.kext](https://github.com/acidanthera/WhateverGreen/releases)
+    -  Various patches necessary for certain ATI/AMD/Intel/Nvidia GPUs
+*  [VirtualSMC.kext](https://github.com/acidanthera/VirtualSMC/releases)
+    - Advanced Apple SMC emulator in the kernel
 
-We also need `UsbInjectAll.kext` which is not included in the Clover installer. I like to [download the latest version of UsbInjectAll here](https://bitbucket.org/RehabMan/os-x-usb-inject-all/downloads/).
 
-* Copy `UsbInjectAll.kext` (release version, NOT debug) to `/EFI/CLOVER/kexts/Other`.
 
-## Patching Things Up
+## Patching Things Up (not yet working)
 
 Here we are going to enable our iGPU for good.
 
