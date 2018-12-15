@@ -6,7 +6,8 @@
 Extensive information of a successful build, including full EFI folder.
 
 
-##### [SUCCESS - Ongoing Status of Designare Z390 with i7-9700k @ tonymacx86.com](https://www.tonymacx86.com/threads/success-ongoing-status-of-designare-z390-with-i7-9700k.266065/)
+##### [SUCCESS - Ongoing Status of Designare Z390 with i7-9700k @ tonymacx86.com](https://www.tonymacx86.co
+m/threads/success-ongoing-status-of-designare-z390-with-i7-9700k.266065/)
 
 Good thread where the author documents his many experiments, failures and successes.
 
@@ -23,3 +24,5 @@ Good thread where the author documents his many experiments, failures and succes
 ### Misc
 
 * HS14 is Bluetooth
+* [Untested DSDT for Z390 Aorus Master](https://www.insanelymac.com/forum/topic/336767-gigabyte-z390-aorus-master-request-for-help-with-dsdt/?tab=comments#comment-2652273
+* )
