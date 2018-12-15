@@ -6,6 +6,7 @@ This build is "Vanilla". I used [this guide](https://hackintosh.gitbook.io/-r-ha
 
 See my [Hardware List](HARDWARE.md)
 
+
 ### What's Working/What's Not
 
 ##### Working
@@ -30,10 +31,13 @@ See my [Hardware List](HARDWARE.md)
 ##### What I Fixed (and how)
 - Onboard Bluetooth is hit or miss. However, I disabled it because I have a natively supported Broadcom BCM94360CS2 WIFI/BT adapter.
 
+
 ### Step By Step Instructions
 
 See [STEP_BY_STEP.md](STEP_BY_STEP.md)
 
+
+### The Lazy Way
 
 You are welcome to use my config.plist and kexts. However, make sure you set the following:
 
