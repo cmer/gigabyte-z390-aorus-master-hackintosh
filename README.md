@@ -13,13 +13,14 @@ See my [Hardware List](HARDWARE.md)
 - Ethernet
 - Audio (including digital audio)
 - APFS
-- Sleep/Wake (a bit slow though, can take up to 15 seconds to wake up)
+- Sleep/Wake (Sometimes slow, sometimes USB devices get ejected)
+- Headless iGPU with native support for Quicklook and Preview
 - All USB ports
+- 
 
 ##### Not Working (yet!)
 - WI-FI. This will likely never work since it is the new Intel CNVi that MacOS doesn't support.
-- Quicklook/Preview (need to fix iGPU)
-- iGFX HDMI output. Common problem, nobody seems to have found a solution
+- iGFX HDMI output. Common problem, nobody seems to have found a solution. But I don't need it.
 
 ##### Not Yet Tested
 - iMessage

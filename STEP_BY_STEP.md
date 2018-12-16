@@ -6,6 +6,9 @@ These are step by step instructions for a Vanilla install of MacOS Mojave on a G
 ## Setup UEFI/BIOS
 
 * Load Optimized Default Settings
+* Peripherals → USB Configuration → XHCI Hand-off : Enabled
+* Chipset → Internal Graphics : Enabled (important for Quicklook/Preview)
+    - Please note that we will be using our internal GPU in **headless** mode only and this guide assumes that. This is how an iMac18,3 (what we're basing our build on) behaves.
 
 That's it! I literally didn't change anything else and it just worked. However, these are settings that are generally recommended. Your mileage may vary:
 
@@ -42,8 +45,11 @@ You need to create your own `config.plist` file. Start with the sample file I in
 
 Here's a [great explanation of the Clover settings for Coffee Lake](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/config.plist-per-hardware/coffee-lake) if you want to better understand what's going on.
 
-* Open `coffeelake_sample_config.plist` with Clover Configurator (right click → Open With → Clover Configurator)
-* In **SMBIOS**:
+1. Open `coffeelake_sample_config.plist` with Clover Configurator (right click → Open With → Clover Configurator)
+2.
+
+
+ In **SMBIOS**:
     - Click the button with an up/down arrow (middle right). Chose `iMac18,3`. This is important since we'll be connecting our monitor to the RX580. The HDMI port on our motherboard is NOT yet working for Hackintoshes.
     - Make sure the serial number generated is an iMac (mid-2017) by clicking `Model Lookup`. 
     - Ensure that `Check Coverage` reports that the serial is **NOT** valid. You don't want to use somebody else's serial number.
@@ -55,10 +61,13 @@ Here's a [great explanation of the Clover settings for Coffee Lake](https://hack
     - Change the `Custom Flags` to: `shikigva=40 uia_exclude=HS14` (this disables onboard Bluetooth since we'll be using an external Broadcom Wi-Fi/Bluetooth adapter)
 * In **ACPI**:
     - Click `List of Patches` and enable the following:
-        + `Change GFX0 to IGPU` -- this enables iGPU as headless for Quicklooks/Preview to work. More on this later. 
+        + `Change GFX0 to IGPU`
 * In **Devices**:
     - Set `Inject` to `16`. This is a special id for our patched, unreleased `AppleALC.kext` file (discussed below). This makes your audio work.
-
+    - Now to enable our headless iGPU, we need to fake the device id. To do so, Click `Properties`, select `PciRoot(0x0)/Pci(0x2,0x0)`. Then, click the + button to add a property. Add the following:
+        + Property Key: `device-id`
+        + Property Value: `923E0000`
+        + Value Type: `DATA`
 * Click the Export Configuration button (bottom left), then Save As `config.plist`.
 * Copy your newly generated `config.plist` to `/EFI/CLOVER/` on your bootable USB key.
 
@@ -80,36 +89,26 @@ We need a few Kexts to get our installation working as it should:
     -  Various patches necessary for certain ATI/AMD/Intel/Nvidia GPUs
 * [VirtualSMC.kext](https://github.com/acidanthera/VirtualSMC/releases)
     - Advanced Apple SMC emulator in the kernel
+
+## Other Kexts
+
+These are Kexts that I am not using, but that could potentially be useful for you.
+
 * [NoVPAJpeg.kext](https://github.com/vulgo/NoVPAJpeg/releases)
-    - This is a kext we're using TEMPORARILY to get Quicklook/Preview working. iGPU is known to now work properly on Z390 boards yet. Hopefully we can remove this in the future.
+    - This is a Kext you can use if you are having issues with Quicklook/Preview. iGPU is known to now work properly on Z390 boards. I was able to get my iGPU (headless) to work properly so I don't need this.
 
 
+## Fixing Kernel Panics at Reboot/Shutdown
 
+Because NVRAM is not natively working on my motherboard, we have to use the UEFI driver `EmuVariableUefi-64.efi`. You can install `EmuVariableUefi-64.efi` using Clover Configurator (Install Drivers) or with the Clover installation package (Customize → UEFI Drivers).
 
+When I added `EmuVariableUefi-64.efi` to `/EFI/CLOVER/drivers64UEFI` , I got a crash at bootup. 
 
+The solution to that crash is to remove `AptioMemoryFix-64.efi` and to replace it with `OsxAptioFix2Drv-free2000.efi`. You can [download it from here](https://www.dropbox.com/s/d74tdymovdxmlly/OsxAptioFix2Drv-free2000.efi?dl=0).
 
+I am told that there are downsides (that I don't fully understand yet) to using `OsxAptioFix2Drv-free2000`, so do this at your own risk.
 
-## Patching Things Up (not yet working -- skip this section)
-
-**NOTE**: I still can't get my iGPU to work in headless mode. Do not follow the instructions below.
-
-Here we are going to enable our iGPU for good.
-
-* Open FB-Patcher
-* In the menu bar (top of the screen), File → Open → `/EFI/CLOVER/config.plist` (from your USB bootable drive)
-* Click `Framebuffer` in the menu bar (at the top) and select `macOS 10.14`.
-
-#### Enable headless iGPU
-
-* Select `Platformid`: `0x3E920003`
-* Go to `Patch` →
-*  `Advanced`, click `Device ID`, then select `0x3E9B Intel UHD Graphics 630`.
-*  Click `Generate Patch` # TODO: figure out why this does nothing
-* File → Export → FrameBuffer Binary → /EFI/CLOVER/ACPI/patched/z390_aorus_master_igpu.aml
-
-
-
-
+I will update this guide when I learn more about all this. Hopefully we can run without these alternative UEFI drivers in the future.
 
 
 

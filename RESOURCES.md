@@ -19,6 +19,10 @@ Good thread where the author documents his many experiments, failures and succes
 
 ##### [How to set custom Framebuffer for Radeon RX 580](https://www.tonymacx86.com/threads/updated-storks-thunderbolt-build-i5-3570k-ga-z77x-up5-th-gtx-760.73112/page-99#post-1857755)
 
+##### [Improving Sleep on a Hackintosh](https://hackintosher.com/forums/thread/improving-sleep-on-a-hackintosh-wakeup-freezes-black-screens.486/)
+
+##### [How to create custom SSDT-UIAC - Guide](https://hackintosher.com/forums/thread/improving-sleep-on-a-hackintosh-wakeup-freezes-black-screens.486/#post-3034)
+
 ##### [A great Kext repo](https://1drv.ms/f/s!AiP7m5LaOED-m-J8-MLJGnOgAqnjGw)
 
 
