@@ -8,8 +8,6 @@
 		<dict>
 			<key>Fixes</key>
 			<dict>
-				<key>FixHDA</key>
-				<true/>
 				<key>FixHPET</key>
 				<true/>
 				<key>FixIPIC</key>
@@ -67,16 +65,16 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change HDAS to HDEF</string>
+					<string>change GFX0 to IGPU</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
 					<data>
-					SERBUw==
+					R0ZYMA==
 					</data>
 					<key>Replace</key>
 					<data>
-					SERFRg==
+					SUdQVQ==
 					</data>
 				</dict>
 			</array>
@@ -100,10 +98,6 @@
 		<dict>
 			<key>Generate</key>
 			<dict>
-				<key>CStates</key>
-				<true/>
-				<key>PStates</key>
-				<true/>
 				<key>PluginType</key>
 				<true/>
 			</dict>
@@ -112,7 +106,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>keepsyms=1 dart=0 debug=0x100 -v shikigva=40</string>
+		<string>dart=0 -v slide=0 keepsyms=1 debug=0x100 uia_exclude=HS14 shikigva=40</string>
 		<key>DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>Timeout</key>
@@ -136,6 +130,10 @@
 				<key>AAPL,ig-platform-id</key>
 				<data>
 				BwCbPg==
+				</data>
+				<key>device-id</key>
+				<data>
+				kj4AAA==
 				</data>
 				<key>framebuffer-patch-enable</key>
 				<data>
@@ -288,9 +286,9 @@
 		<key>BooterConfig</key>
 		<string>0x28</string>
 		<key>CsrActiveConfig</key>
-		<string>0x3E7</string>
+		<string>0x0</string>
 		<key>MLB</key>
-		<string>C02726902CDH69F1M</string>
+		<string>{{PASTE BOARD SERIAL NUMBER HERE}}</string>
 		<key>ROM</key>
 		<string>UseMacAddr0</string>
 	</dict>
@@ -307,7 +305,7 @@
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardSerialNumber</key>
-		<string>{{BOARD_SERIAL_NUMBER}}</string>
+		<string>{{GENERATE ME}}</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
@@ -337,9 +335,9 @@
 		<key>ProductName</key>
 		<string>iMac18,3</string>
 		<key>SerialNumber</key>
-		<string>{{SERIAL_NUMBER}}</string>
+		<string>{{GENERATE ME}}</string>
 		<key>SmUUID</key>
-		<string>{{SMUUID}}</string>
+		<string>{{GENERATE ME}}</string>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>
