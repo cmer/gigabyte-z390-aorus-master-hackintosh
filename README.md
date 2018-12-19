@@ -16,21 +16,20 @@ See my [Hardware List](HARDWARE.md)
 - Sleep/Wake (Sometimes slow, sometimes USB devices get ejected)
 - Headless iGPU with native support for Quicklook and Preview
 - All USB ports
-- 
-
-##### Not Working (yet!)
-- WI-FI. This will likely never work since it is the new Intel CNVi that MacOS doesn't support.
-- iGFX HDMI output. Common problem, nobody seems to have found a solution. But I don't need it.
-
-##### Not Yet Tested
 - iMessage
 - App Store
+- Facetime
+- APFS
+
+##### Not Working
+- WI-FI. This will likely never work since it is the new Intel CNVi that MacOS doesn't support.
+- iGFX HDMI output. Common problem, nobody seems to have found a solution. But I don't need it.
+- Onboard Bluetooth is hit or miss. However, I disabled it (HS14) because I have a natively supported Broadcom BCM94360CS2 WIFI/BT adapter.
+
+##### Not Yet Tested
 - Wake with Apple Watch
 - FileVault
 - USB speed (ports are working, not sure if they're at full speed)
-
-##### What I Fixed (and how)
-- Onboard Bluetooth is hit or miss. However, I disabled it because I have a natively supported Broadcom BCM94360CS2 WIFI/BT adapter.
 
 
 ### Step By Step Instructions
