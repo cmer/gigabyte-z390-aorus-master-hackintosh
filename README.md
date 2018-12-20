@@ -26,17 +26,21 @@ See my [Hardware List](HARDWARE.md)
 - Airdrop (Mac to Mac and iOS to Mac)
 - AirPlay
 - Continuity
+- Apple Music (iTunes)
 
 
 ##### Not Working
 - iGFX HDMI output. Common problem, nobody seems to have found a solution. But I don't need it.
 - Built-in wifi. This will likely never work since it is the new Intel CNVi that MacOS doesn't support.
 - Onboard Bluetooth is hit or miss. However, I disabled it (HS14) because I have a natively supported Broadcom BCM94360CS2 WIFI/BT adapter.
+- Netflix DRM in Safari (works in Chrome)
+- DRM-protected video in iTunes (ie: purchased TV shows)
 
 
 ##### Not Yet Tested
 - FileVault
 - All USB ports are working, but I haven't tested their speed.
+- PowerNap
 
 
 ### Step By Step Instructions
