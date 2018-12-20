@@ -24,6 +24,7 @@ See my [Hardware List](HARDWARE.md)
 - Bluetooth & Wi-Fi (via Broadcom adapter)
 - Unlock with Apple Watch
 - Airdrop (Mac to Mac and iOS to Mac)
+- AirPlay
 - Continuity
 
 
