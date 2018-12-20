@@ -13,7 +13,7 @@ See my [Hardware List](HARDWARE.md)
 - Ethernet
 - Audio (including digital audio)
 - APFS
-- Sleep/Wake (Sometimes slow, sometimes USB devices get ejected)
+- Sleep/Wake (USB devices sometimes get ejected when waking from deep sleep)
 - Headless iGPU with native support for Quicklook and Preview
 - All USB ports
 - iMessage
