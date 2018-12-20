@@ -41,6 +41,7 @@ See my [Hardware List](HARDWARE.md)
 - FileVault
 - All USB ports are working, but I haven't tested their speed.
 - PowerNap
+- Thunderbolt Hot Swap
 
 
 ### Step By Step Instructions
