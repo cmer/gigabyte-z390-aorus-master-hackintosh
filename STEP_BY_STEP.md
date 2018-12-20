@@ -29,8 +29,7 @@ These are all Mac utilities. Therefore, you need access to a real Mac.
 
 * [Clover Installer](https://github.com/Dids/clover-builder/releases)
 * [Clover Configurator](https://mackie100projects.altervista.org/download-clover-configurator/)
-* [IOJones](https://sourceforge.net/projects/iojones/)
-* [FB-Patcher](https://www.insanelymac.com/forum/topic/335018-intel-fb-patcher-v166/)
+
 
 ## Creating a Bootable USB Installation Drive
 
