@@ -27,6 +27,7 @@ See my [Hardware List](HARDWARE.md)
 - AirPlay
 - Continuity
 - Apple Music (iTunes)
+- Power Nap
 
 
 ##### Not Working
@@ -40,7 +41,6 @@ See my [Hardware List](HARDWARE.md)
 ##### Not Yet Tested
 - FileVault
 - All USB ports are working, but I haven't tested their speed.
-- PowerNap
 - Thunderbolt Hot Swap
 
 
