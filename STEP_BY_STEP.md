@@ -115,6 +115,7 @@ I will update this guide when I learn more about all this. Hopefully we can run 
 ## Credit where credit is due
 
 * [/r/hackintosh's awesome Vanilla Install guide](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/)
+* MacPeet at [hackintosh-forum.de](https://www.hackintosh-forum.de) for a modified `AppleALC.kext`.
 * See [RESOURCES.md](RESOURCES.md) for other threads, sites, posts I used to get this to work.
 
 ### THIS IS WORK IN PROGRESS. I will continously update these documents as I go along.
