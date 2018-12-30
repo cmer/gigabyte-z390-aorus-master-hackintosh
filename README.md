@@ -6,6 +6,7 @@ This build is "Vanilla". I used [this guide](https://hackintosh.gitbook.io/-r-ha
 
 See my [Hardware List](HARDWARE.md)
 
+![About My Mac](images/about.png)
 
 ### What's Working/What's Not
 
@@ -21,7 +22,7 @@ See my [Hardware List](HARDWARE.md)
 - Facetime
 - APFS
 - Handoff (iOS to Mac)
-- Bluetooth & Wi-Fi (via Broadcom adapter)
+- Bluetooth & Wi-Fi (via Broadcom adapter. Also works in UEFI and Clover.)
 - Unlock with Apple Watch
 - Airdrop (Mac to Mac and iOS to Mac)
 - AirPlay
