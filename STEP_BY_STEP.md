@@ -62,7 +62,7 @@ Here's a [great explanation of the Clover settings for Coffee Lake](https://hack
     - Click `List of Patches` and enable the following:
         + `Change GFX0 to IGPU`
 * In **Devices**:
-    - Set `Inject` to `16`. This is a special id for our patched, unreleased `AppleALC.kext` file (discussed below). This makes your audio work.
+    - Set `Inject` to `16`.
     - Now to enable our headless iGPU, we need to fake the device id. To do so, Click `Properties`, select `PciRoot(0x0)/Pci(0x2,0x0)`. Then, click the + button to add a property. Add the following:
         + Property Key: `device-id`
         + Property Value: `923E0000`
@@ -76,12 +76,10 @@ All Kexts should be copied to `/EFI/CLOVER/kexts/Other`. Whenever copying kexts 
 
 We need a few Kexts to get our installation working as it should:
 
-* AppleALC.kext
-    - As of this writing, we need a special, unreleased, patched `AppleALC.kext` file to get onboard audio working. I recommend you simply grab the one I include in this guide. Find it at `/MY EFI/CLOVER/kexts/Other`
 * [USBInjectAll.kext](https://bitbucket.org/RehabMan/os-x-usb-inject-all/downloads/)
     - This is necessary to exclude our onboard Bluetooth adapter (HS14).
 * [IntelMausiEthernet.kext](https://bitbucket.org/RehabMan/os-x-intel-network/downloads/)
-    -  This is for our onboard LAN adapter
+    -  This is for our onboard Bluetooth/Wifi adapter
 * [Lilu.kext](https://github.com/acidanthera/Lilu/releases)
     -  Arbitrary kext and process patching on macOS
 * [WhateverGreen.kext](https://github.com/acidanthera/WhateverGreen/releases)
@@ -114,7 +112,7 @@ I will update this guide when I learn more about all this. Hopefully we can run 
 ## Credit where credit is due
 
 * [/r/hackintosh's awesome Vanilla Install guide](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/)
-* MacPeet at [hackintosh-forum.de](https://www.hackintosh-forum.de) for a modified `AppleALC.kext`.
+* MacPeet at [hackintosh-forum.de](https://www.hackintosh-forum.de) for a modified `AppleALC.kext`. (Now released as version 1.3.4)
 * See [RESOURCES.md](RESOURCES.md) for other threads, sites, posts I used to get this to work.
 
 ### THIS IS WORK IN PROGRESS. I will continously update these documents as I go along.
