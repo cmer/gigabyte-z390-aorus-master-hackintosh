@@ -42,7 +42,6 @@ See my [Hardware List](HARDWARE.md)
 ##### Not Yet Tested
 - FileVault
 - All USB ports are working, but I haven't tested their speed.
-- Thunderbolt Hot Swap
 
 
 ### Step By Step Instructions
