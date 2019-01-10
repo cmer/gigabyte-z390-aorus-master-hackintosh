@@ -168,7 +168,7 @@
 			<false/>
 		</dict>
 		<key>ScreenResolution</key>
-		<string>3840x2160</string>
+		<string></string>
 		<key>Theme</key>
 		<string>embedded</string>
 	</dict>

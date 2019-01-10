@@ -1,7 +1,7 @@
 require 'plist'
 require 'json'
 
-class CleanSerial
+class CleanConfig
   attr_reader :config_path
 
   GENERATE_ME = "{{GENERATE ME}}"
@@ -19,6 +19,7 @@ class CleanSerial
     result['RtVariables']['MLB'] = "{{PASTE BOARD SERIAL NUMBER HERE}}"
     result['Boot']['DefaultVolume'] = 'LastBootedVolume'
     result['GUI']['Theme'] = 'embedded'
+    result['GUI']['ScreenResolution'] = ''
 
     result.save_plist(config_path)
     true

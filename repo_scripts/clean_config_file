@@ -5,7 +5,7 @@ require 'bundler/setup'
 
 config_path = File.join(File.expand_path(File.dirname(__FILE__)), '..', 'MY EFI', 'CLOVER', 'config.plist')
 
-require_relative 'lib/clean_serial'
+require_relative 'lib/clean_config'
 
-CleanSerial.new(config_path).clean!
+CleanConfig.new(config_path).clean!
 puts "Done!"
