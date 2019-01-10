@@ -21,10 +21,10 @@ See my [Hardware List](HARDWARE.md)
 - App Store
 - Facetime
 - APFS
-- Handoff (iOS to Mac)
+- Handoff
 - Bluetooth & Wi-Fi (via Broadcom adapter. Also works in UEFI and Clover.)
 - Unlock with Apple Watch
-- Airdrop (Mac to Mac and iOS to Mac)
+- Airdrop
 - AirPlay
 - Continuity
 - Apple Music (iTunes)
@@ -32,7 +32,7 @@ See my [Hardware List](HARDWARE.md)
 
 
 ##### Not Working
-- iGFX HDMI output. Common problem, nobody seems to have found a solution. But I don't need it.
+- iGFX HDMI output during install. Common problem, nobody seems to have found a solution. But I don't need it.
 - Built-in wifi. This will likely never work since it is the new Intel CNVi that MacOS doesn't support.
 - Onboard Bluetooth is hit or miss. However, I disabled it (HS14) because I have a natively supported Broadcom BCM94360CS2 WIFI/BT adapter.
 - Netflix DRM in Safari (works in Chrome)

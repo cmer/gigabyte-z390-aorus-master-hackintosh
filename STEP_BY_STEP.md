@@ -9,19 +9,9 @@ These are step by step instructions for a Vanilla install of MacOS Mojave on a G
 * Peripherals → USB Configuration → XHCI Hand-off : Enabled
 * Chipset → Internal Graphics : Enabled (important for Quicklook/Preview)
     - Please note that we will be using our internal GPU in **headless** mode only and this guide assumes that. This is how an iMac18,3 (what we're basing our build on) behaves.
+    - If you opt to disable Internal Graphics, you will need to use `NoVPAJpeg.kext`. Otherwise, it is not required.
 
-That's it! I literally didn't change anything else and it just worked. However, these are settings that are generally recommended. Your mileage may vary:
-
-* BIOS → Fast Boot : Disabled
-* BIOS → LAN PXE Boot Option ROM : Disabled
-* BIOS → Storage Boot Option Control : UEFI
-* Peripherals → Trusted Computing → Security Device Support : Disable
-* Peripherals → Network Stack Configuration → Network Stack : Disabled
-* Peripherals → USB Configuration → Legacy USB Support : Auto
-* Peripherals → USB Configuration → XHCI Hand-off : Enabled (Extremely important)
-* Chipset → Vt-d : Disabled
-* Chipset → Wake on LAN Enable : Disabled
-* Chipset → IOAPIC 24-119 Entries : Enabled
+You may want to take a look at my [BIOS Settings & Overclocking](BIOS_SETTINGS.md).
 
 ## Utilities You'll Need
 
