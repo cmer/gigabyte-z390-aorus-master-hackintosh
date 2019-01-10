@@ -82,7 +82,7 @@ We need a few Kexts to get our installation working as it should:
 These are Kexts that I am not using, but that could potentially be useful for you.
 
 * [NoVPAJpeg.kext](https://github.com/vulgo/NoVPAJpeg/releases)
-    - This is a Kext you can use if you are having issues with Quicklook/Preview. iGPU is known to now work properly on Z390 boards. I was able to get my iGPU (headless) to work properly so I don't need this.
+    - This is a Kext you can use if you are having issues with Quicklook/Preview. iGPU is known to not always work properly on Z390 boards. I was able to get my iGPU (headless) to work properly so I don't need this.
 
 
 ## Fixing Kernel Panics at Reboot/Shutdown
