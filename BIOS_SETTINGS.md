@@ -4,6 +4,8 @@ Here are the settings I used in my BIOS to overclock my i9 9900k to 5.1GHz. Thes
 
 I set these after loading optimized defaults. I am currently using BIOS version F7.
 
+![Geekbench](images/geekbench.png)
+
 ## M.I.T
 
 ### Advanced Frequency Settings
