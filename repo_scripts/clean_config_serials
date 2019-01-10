@@ -1,17 +1,11 @@
 #!/usr/bin/env ruby
 
-require 'plist'
-require 'json'
+require 'rubygems'
+require 'bundler/setup'
 
 config_path = File.join(File.expand_path(File.dirname(__FILE__)), '..', 'MY EFI', 'CLOVER', 'config.plist')
-result = Plist.parse_xml(config_path)
 
-GENERATE_ME = "{{GENERATE ME}}"
+require_relative 'lib/clean_serial'
 
-result['SMBIOS']['BoardSerialNumber'] = GENERATE_ME
-result['SMBIOS']['SerialNumber'] = GENERATE_ME
-result['SMBIOS']['SmUUID'] = GENERATE_ME
-result['RtVariables']['MLB'] = "{{PASTE BOARD SERIAL NUMBER HERE}}"
-
-result.save_plist(config_path)
+CleanSerial.new(config_path).clean!
 puts "Done!"
