@@ -53,7 +53,7 @@ I set these after loading optimized defaults. I am currently using BIOS version 
 
 ## Chipset
 
-* Internal Graphics: Disabled
+* Internal Graphics: Enabled
 
 ## Power
 

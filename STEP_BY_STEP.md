@@ -7,9 +7,10 @@ These are step by step instructions for a Vanilla install of MacOS Mojave on a G
 
 * Load Optimized Default Settings
 * Peripherals → USB Configuration → XHCI Hand-off : Enabled
-* Chipset → Internal Graphics : Enabled (important for Quicklook/Preview)
+* Chipset → Internal Graphics : Enabled (important for Quicklook/Preview and hardware acceleration)
     - Please note that we will be using our internal GPU in **headless** mode only and this guide assumes that. This is how an iMac18,3 (what we're basing our build on) behaves.
     - If you opt to disable Internal Graphics, you will need to use `NoVPAJpeg.kext`. Otherwise, it is not required.
+    - I seriously recommend enabling the iGPU.
 
 You may want to take a look at my [BIOS Settings & Overclocking](BIOS_SETTINGS.md).
 
