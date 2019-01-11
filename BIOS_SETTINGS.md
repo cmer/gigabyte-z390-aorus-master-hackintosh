@@ -38,7 +38,7 @@ I set these after loading optimized defaults. I am currently using BIOS version 
 * VAXG Current Protection: Turbo
 
 #### CPU Core Voltage Control
-* CPU Vcore: 1.350V
+* CPU Vcore: 1.370V
 
 
 ## Peripherals
