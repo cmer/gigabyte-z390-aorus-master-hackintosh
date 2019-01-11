@@ -7,13 +7,15 @@ require 'tmpdir'
 require 'fileutils'
 require_relative 'lib/clean_config'
 
-if ARGV[0].nil?
+DEFAULT_EFI_VOLUME = '/Volumes/EFI'
+
+if ARGV[0].nil? && !File.exists?(DEFAULT_EFI_VOLUME)
   puts "Must specify EFI volume."
-  puts "ex: ./dump_efi /Volumes/EFI"
+  puts "ex: ./dump_efi #{DEFAULT_EFI_VOLUME}"
   exit 1
 end
 
-EFI_VOL        = File.expand_path(ARGV[0].strip)
+EFI_VOL        = File.expand_path((ARGV[0] || DEFAULT_EFI_VOLUME).strip)
 PLIST_PATH     = File.join(EFI_VOL, 'EFI', 'CLOVER', 'config.plist')
 SCRIPT_PATH    = File.expand_path(File.dirname(__FILE__))
 MY_EFI_PATH    = File.join(SCRIPT_PATH, '..', 'MY EFI')
