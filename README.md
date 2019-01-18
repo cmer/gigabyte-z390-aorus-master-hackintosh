@@ -14,9 +14,9 @@ See my [Hardware List](HARDWARE.md)
 - Ethernet
 - Audio (including digital audio)
 - APFS
-- Sleep/Wake (USB devices sometimes get ejected when waking from deep sleep)
+- Sleep/Wake
 - Headless iGPU with native support for Quicklook and Preview
-- All USB ports
+- All USB ports (USB 3 speed working)
 - iMessage
 - App Store
 - Facetime
@@ -41,13 +41,15 @@ See my [Hardware List](HARDWARE.md)
 
 ##### Not Yet Tested
 - FileVault
-- All USB ports are working, but I haven't tested their speed.
 
 
 ### Step By Step Instructions
 
 See [STEP_BY_STEP.md](STEP_BY_STEP.md)
 
+### USB Port Map & SSDT
+
+See [USB_MAP.md](USB_MAP.md) for a map of all the ports on the Aorus z390 Master.
 
 ### The Lazy Way
 

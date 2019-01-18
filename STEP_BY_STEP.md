@@ -99,6 +99,11 @@ I am told that there are downsides (that I don't fully understand yet) to using 
 I will update this guide when I learn more about all this. Hopefully we can run without these alternative UEFI drivers in the future.
 
 
+## TODO
+
+Explain how I generated `USBMap.kext`
+
+
 
 ## Credit where credit is due
 
