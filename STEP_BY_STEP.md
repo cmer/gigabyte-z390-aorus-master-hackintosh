@@ -99,9 +99,9 @@ I am told that there are downsides (that I don't fully understand yet) to using 
 I will update this guide when I learn more about all this. Hopefully we can run without these alternative UEFI drivers in the future.
 
 
-## TODO
+## How to fix all your USB issues.
 
-Explain how I generated `USBMap.kext`
+[Here I made a quick video explaining how to generate your own USB SSDT/kext](https://youtu.be/j3V7szXZZTc). This will fix all your USB issues such as slow speed, drives getting ejected on wake, etc.
 
 
 
