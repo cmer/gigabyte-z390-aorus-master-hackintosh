@@ -15,7 +15,7 @@ See my [Hardware List](HARDWARE.md)
 - Audio (including digital audio)
 - APFS
 - Sleep/Wake
-- Headless iGPU with native support for Quicklook and Preview
+- Headless iGPU with native support for Quicklook and Preview, and Final Cut Pro X.
 - All USB ports (USB 3 speed working)
 - iMessage
 - App Store

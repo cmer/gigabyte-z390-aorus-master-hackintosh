@@ -54,10 +54,17 @@ Here's a [great explanation of the Clover settings for Coffee Lake](https://hack
         + `Change GFX0 to IGPU`
 * In **Devices**:
     - Set `Inject` to `16`.
-    - Now to enable our headless iGPU, we need to fake the device id. To do so, Click `Properties`, select `PciRoot(0x0)/Pci(0x2,0x0)`. Then, click the + button to add a property. Add the following:
-        + Property Key: `device-id`
-        + Property Value: `923E0000`
-        + Value Type: `DATA`
+    - Now to **properly** enable our headless iGPU, we need to fake the device id and change `ig-platform-id`. To do so, Click `Properties`, select `PciRoot(0x0)/Pci(0x2,0x0)`. Then, click the + button to add a property.    
+      - Add:
+          + Property Key: `device-id`
+          + Property Value: `923E0000`
+          + Value Type: `DATA`
+    
+      - And add (or update if already present):
+          + Property Key: `AAPL,ig-platform-id`
+          + Property Value: `0300923E`
+          + Value Type: `DATA`
+
 * Click the Export Configuration button (bottom left), then Save As `config.plist`.
 * Copy your newly generated `config.plist` to `/EFI/CLOVER/` on your bootable USB key.
 
