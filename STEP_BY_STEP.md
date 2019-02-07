@@ -118,4 +118,6 @@ I will update this guide when I learn more about all this. Hopefully we can run 
 * MacPeet at [hackintosh-forum.de](https://www.hackintosh-forum.de) for a modified `AppleALC.kext`. (Now released as version 1.3.4)
 * See [RESOURCES.md](RESOURCES.md) for other threads, sites, posts I used to get this to work.
 
-### THIS IS WORK IN PROGRESS. I will continously update these documents as I go along.
+## Status
+
+I consider this guide complete and finished. Many have used it successfully already. I will continously update these documents as needed.
