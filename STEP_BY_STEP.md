@@ -77,7 +77,7 @@ We need a few Kexts to get our installation working as it should:
 * [USBInjectAll.kext](https://bitbucket.org/RehabMan/os-x-usb-inject-all/downloads/)
     - This is necessary to exclude our onboard Bluetooth adapter (HS14).
 * [IntelMausiEthernet.kext](https://bitbucket.org/RehabMan/os-x-intel-network/downloads/)
-    -  This is for our onboard Bluetooth/Wifi adapter
+    -  This is for our onboard Ethernet/LAN adapter
 * [Lilu.kext](https://github.com/acidanthera/Lilu/releases)
     -  Arbitrary kext and process patching on macOS
 * [WhateverGreen.kext](https://github.com/acidanthera/WhateverGreen/releases)
