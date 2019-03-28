@@ -41,7 +41,7 @@ Here's a [great explanation of the Clover settings for Coffee Lake](https://hack
 
  In **SMBIOS**:
     - Click the button with an up/down arrow (middle right). Chose `iMac18,3`. This is important since we'll be connecting our monitor to the RX580. The HDMI port on our motherboard is NOT yet working for Hackintoshes.
-    - Make sure the serial number generated is an iMac (mid-2017) by clicking `Model Lookup`. 
+    - Make sure the serial number generated is an iMac (mid-2017) by clicking `Model Lookup`.
     - Ensure that `Check Coverage` reports that the serial is **NOT** valid. You don't want to use somebody else's serial number.
     - While you're here, copy your Board Serial Number to your clipboard. You'll need it soon.
 * In **Rt Variables**:
@@ -54,16 +54,18 @@ Here's a [great explanation of the Clover settings for Coffee Lake](https://hack
         + `Change GFX0 to IGPU`
 * In **Devices**:
     - Set `Inject` to `16`.
-    - Now to **properly** enable our headless iGPU, we need to fake the device id and change `ig-platform-id`. To do so, Click `Properties`, select `PciRoot(0x0)/Pci(0x2,0x0)`. Then, click the + button to add a property.    
+    - Click `Properties`, select `PciRoot(0x0)/Pci(0x2,0x0)`. Then, click the + button to add a property.
+      - Add (or update if already present):
+          + Property Key: `AAPL,ig-platform-id`
+          + Property Value: `0300923E`
+          + Value Type: `DATA`
+    - If you are installing Mojave 10.14.3 or earlier, you need fake your iGPU id in order to **properly** enable it. This is important but not necessary with 10.14.4 and up.
       - Add:
           + Property Key: `device-id`
           + Property Value: `923E0000`
           + Value Type: `DATA`
-    
-      - And add (or update if already present):
-          + Property Key: `AAPL,ig-platform-id`
-          + Property Value: `0300923E`
-          + Value Type: `DATA`
+
+
 
 * Click the Export Configuration button (bottom left), then Save As `config.plist`.
 * Copy your newly generated `config.plist` to `/EFI/CLOVER/` on your bootable USB key.
@@ -90,14 +92,14 @@ We need a few Kexts to get our installation working as it should:
 These are Kexts that I am not using, but that could potentially be useful for you.
 
 * [NoVPAJpeg.kext](https://github.com/vulgo/NoVPAJpeg/releases)
-    - This is a Kext you can use if you are having issues with Quicklook/Preview. iGPU is known to not always work properly on Z390 boards. I was able to get my iGPU (headless) to work properly so I don't need this.
+    - This is a Kext you can use if you are having issues with Quicklook/Preview. iGPU is known to not always work properly on Z390 boards. My iGPU (headless) is working properly and natively, so I don't need this.
 
 
 ## Fixing Kernel Panics at Reboot/Shutdown
 
 Because NVRAM is not natively working on my motherboard, we have to use the UEFI driver `EmuVariableUefi-64.efi`. You can install `EmuVariableUefi-64.efi` using Clover Configurator (Install Drivers) or with the Clover installation package (Customize → UEFI Drivers).
 
-When I added `EmuVariableUefi-64.efi` to `/EFI/CLOVER/drivers64UEFI` , I got a crash at bootup. 
+When I added `EmuVariableUefi-64.efi` to `/EFI/CLOVER/drivers64UEFI` , I got a crash at bootup.
 
 The solution to that crash is to remove `AptioMemoryFix-64.efi` and to replace it with `OsxAptioFix2Drv-free2000.efi`. You can [download it from here](https://www.dropbox.com/s/d74tdymovdxmlly/OsxAptioFix2Drv-free2000.efi?dl=0).
 
