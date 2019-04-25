@@ -35,7 +35,7 @@ FileUtils.rm_rf MY_EFI_PATH
 FileUtils.cp_r(File.join(EFI_VOL, 'EFI'), MY_EFI_PATH)
 CleanConfig.new(NEW_PLIST_PATH).clean!
 FileUtils.rm File.join(MY_EFI_PATH, 'Clover_Install_Log.txt')
-FileUtils.rm File.join(MY_EFI_PATH, 'CLOVER', 'misc', 'preboot.log')
+(FileUtils.rm File.join(MY_EFI_PATH, 'CLOVER', 'misc', 'preboot.log')) rescue nil
 
 # Remove themes
 keep_themes = %w(embedded random logo_main.png pointer-metal.png)
