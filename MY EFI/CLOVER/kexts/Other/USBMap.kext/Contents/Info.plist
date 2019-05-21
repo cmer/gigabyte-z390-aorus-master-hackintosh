@@ -22,7 +22,7 @@
 	<string>1.0</string>
 	<key>IOKitPersonalities</key>
 	<dict>
-		<key>iMac18,3-XHC</key>
+		<key>iMac19,1-XHC</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
 			<string>com.apple.driver.AppleUSBHostMergeProperties</string>
@@ -97,7 +97,7 @@
 					<key>HS11</key>
 					<dict>
 						<key>UsbConnector</key>
-						<integer>3</integer>
+						<integer>0</integer>
 						<key>port</key>
 						<data>
 						CwAAAA==
@@ -178,7 +178,7 @@
 				</dict>
 			</dict>
 			<key>model</key>
-			<string>iMac18,3</string>
+			<string>iMac19,1</string>
 		</dict>
 	</dict>
 	<key>OSBundleRequired</key>

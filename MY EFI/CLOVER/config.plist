@@ -142,6 +142,11 @@
 		<key>XMPDetection</key>
 		<string>Yes</string>
 	</dict>
+	<key>CPU</key>
+	<dict>
+		<key>Type</key>
+		<string>0x1005</string>
+	</dict>
 	<key>Devices</key>
 	<dict>
 		<key>Audio</key>
@@ -234,6 +239,86 @@
 				SW50ZXJuYWw=
 				</data>
 			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>USB port limit patch #1 10.14.x modify by DalianSky(credit ydeng)</string>
+				<key>Disabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				g/sPDw==
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>MatchOS</key>
+				<string>10.14.x</string>
+				<key>Name</key>
+				<string>com.apple.iokit.IOUSBHostFamily</string>
+				<key>Replace</key>
+				<data>
+				g/s/Dw==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>USB port limit patch #2 10.14.x modify by DalianSky(credit PMHeart)</string>
+				<key>Disabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				g+MP0w==
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>MatchOS</key>
+				<string>10.14.x</string>
+				<key>Name</key>
+				<string>com.apple.iokit.IOUSBHostFamily</string>
+				<key>Replace</key>
+				<data>
+				g+M/0w==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>USB Port limit patch #3 10.14.x modify by DalianSky(credits PMheart)</string>
+				<key>Disabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				g/sPDw==
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>MatchOS</key>
+				<string>10.14.x</string>
+				<key>Name</key>
+				<string>com.apple.driver.usb.AppleUSBXHCI</string>
+				<key>Replace</key>
+				<data>
+				g/s/Dw==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>USB Port limit patch #4 10.14.x modify by DalianSky(credits PMheart)</string>
+				<key>Disabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				g/8PDw==
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>MatchOS</key>
+				<string>10.14.x</string>
+				<key>Name</key>
+				<string>com.apple.driver.usb.AppleUSBXHCI</string>
+				<key>Replace</key>
+				<data>
+				g/8/Dw==
+				</data>
+			</dict>
 		</array>
 	</dict>
 	<key>RtVariables</key>
@@ -241,7 +326,7 @@
 		<key>BooterConfig</key>
 		<string>0x28</string>
 		<key>CsrActiveConfig</key>
-		<string>0x0</string>
+		<string>0x3E7</string>
 		<key>MLB</key>
 		<string>{{PASTE BOARD SERIAL NUMBER HERE}}</string>
 		<key>ROM</key>
@@ -250,13 +335,13 @@
 	<key>SMBIOS</key>
 	<dict>
 		<key>BiosReleaseDate</key>
-		<string>09/28/2018</string>
+		<string>02/18/2019</string>
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
 		<key>BiosVersion</key>
-		<string>IM183.88Z.F000.B00.1809280842</string>
+		<string>IM191.88Z.F000.B00.1902181222</string>
 		<key>Board-ID</key>
-		<string>Mac-BE088AF8C5EB4FA2</string>
+		<string>Mac-AA95B1DDAB278B95</string>
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardSerialNumber</key>
@@ -272,7 +357,7 @@
 		<key>ChassisType</key>
 		<string>0x09</string>
 		<key>EfiVersion</key>
-		<string>166.0.0.0.0</string>
+		<string>220.250.368.0.0</string>
 		<key>Family</key>
 		<string>iMac</string>
 		<key>FirmwareFeatures</key>
@@ -288,7 +373,7 @@
 		<key>PlatformFeature</key>
 		<string>0x00</string>
 		<key>ProductName</key>
-		<string>iMac18,3</string>
+		<string>iMac19,1</string>
 		<key>SerialNumber</key>
 		<string>{{GENERATE ME}}</string>
 		<key>SmUUID</key>
