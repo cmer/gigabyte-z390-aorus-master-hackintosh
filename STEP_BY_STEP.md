@@ -2,6 +2,8 @@
 
 These are step by step instructions for a Vanilla install of MacOS Mojave on a Gigabyte Aorus Master Z390 with an Intel i9 9900k CPU.
 
+As of May 21, 2019, this guide assumes that you are installing Mojave 10.14.5.
+
 
 ## Setup UEFI/BIOS
 
