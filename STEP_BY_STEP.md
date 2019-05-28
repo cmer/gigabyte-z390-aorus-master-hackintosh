@@ -10,7 +10,7 @@ As of May 21, 2019, this guide assumes that you are installing Mojave 10.14.5.
 * Load Optimized Default Settings
 * Peripherals → USB Configuration → XHCI Hand-off : Enabled
 * Chipset → Internal Graphics : Enabled (important for Quicklook/Preview and hardware acceleration)
-    - Please note that we will be using our internal GPU in **headless** mode only and this guide assumes that. This is how an iMac18,3 (what we're basing our build on) behaves.
+    - Please note that we will be using our internal GPU in **headless** mode only and this guide assumes that. This is how an iMac19,1 (what we're basing our build on) behaves.
     - If you opt to disable Internal Graphics, you will need to use `NoVPAJpeg.kext`. Otherwise, it is not required.
     - I seriously recommend enabling the iGPU.
 
