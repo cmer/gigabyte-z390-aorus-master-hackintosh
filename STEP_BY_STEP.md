@@ -48,7 +48,8 @@ Here's a [great explanation of the Clover settings for Coffee Lake](https://hack
     - While you're here, copy your Board Serial Number to your clipboard. You'll need it soon.
 * In **Rt Variables**:
     - Paste your Board Serial Number in the `MLB` field.
-    - Set `CsrActiveConfig` to `0x0` which enables SIP for extra security. This should work just fine for a Vanilla Hackintosh install and is how genuine Macs ship.
+    - <del>Set `CsrActiveConfig` to `0x0` which enables SIP for extra security. This should work just fine for a Vanilla Hackintosh install and is how genuine Macs ship.</del>
+    - Set `CsrActiveConfig` to `0x3e7` to disable SIP. This is unfortunately required as of 10.14.5 in order to load unsigned KEXTs.
 * In **Boot**:
     - Change the `Custom Flags` to: `shikigva=40 uia_exclude=HS14` (this disables onboard Bluetooth since we'll be using an external Broadcom Wi-Fi/Bluetooth adapter)
 * In **ACPI**:
