@@ -54,6 +54,9 @@ I set these after loading optimized defaults. I am currently using BIOS version 
 ## Chipset
 
 * Internal Graphics: Enabled
+* DVMT Pre-Allocated: 128M
+* DVMT Total Gfx Mem: 256M
+
 
 ## Power
 
