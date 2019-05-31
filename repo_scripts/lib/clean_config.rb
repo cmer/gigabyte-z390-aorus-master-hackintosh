@@ -20,6 +20,10 @@ class CleanConfig
     result['Boot']['DefaultVolume'] = 'LastBootedVolume'
     result['GUI']['Theme'] = 'embedded'
     result['GUI']['ScreenResolution'] = ''
+    result['GUI']['Scan'] = {}
+    result['GUI']['Scan']['Entries'] = true
+    result['GUI']['Scan']['Legacy'] = true
+    result['GUI']['Scan']['Linux'] = false
 
     result.save_plist(config_path)
     true
