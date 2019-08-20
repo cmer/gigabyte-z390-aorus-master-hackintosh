@@ -4,51 +4,29 @@
 <dict>
 	<key>ACPI</key>
 	<dict>
+		<key>AutoMerge</key>
+		<true/>
 		<key>DSDT</key>
 		<dict>
 			<key>Fixes</key>
 			<dict>
 				<key>FixHPET</key>
-				<true/>
+				<false/>
 				<key>FixIPIC</key>
-				<true/>
+				<false/>
+				<key>FixMutex</key>
+				<false/>
 				<key>FixRTC</key>
-				<true/>
+				<false/>
+				<key>FixRegions</key>
+				<false/>
 				<key>FixShutdown</key>
-				<true/>
+				<false/>
 				<key>FixTMR</key>
-				<true/>
+				<false/>
 			</dict>
 			<key>Patches</key>
 			<array>
-				<dict>
-					<key>Comment</key>
-					<string>change XHCI to XHC</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					WEhDSQ==
-					</data>
-					<key>Replace</key>
-					<data>
-					WEhDXw==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change XHC1 to XHC</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					WEhDMQ==
-					</data>
-					<key>Replace</key>
-					<data>
-					WEhDXw==
-					</data>
-				</dict>
 				<dict>
 					<key>Comment</key>
 					<string>change SAT0 to SATA</string>
@@ -63,6 +41,34 @@
 					U0FUQQ==
 					</data>
 				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change HDAS to HDEF</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					SERBUw==
+					</data>
+					<key>Replace</key>
+					<data>
+					SERFRg==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change HECI to IMEI</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					SEVDSQ==
+					</data>
+					<key>Replace</key>
+					<data>
+					SU1FSQ==
+					</data>
+				</dict>
 			</array>
 		</dict>
 		<key>DropTables</key>
@@ -70,10 +76,6 @@
 			<dict>
 				<key>Signature</key>
 				<string>DMAR</string>
-			</dict>
-			<dict>
-				<key>Signature</key>
-				<string>MATS</string>
 			</dict>
 		</array>
 		<key>FixHeaders</key>
@@ -87,12 +89,16 @@
 				<key>PluginType</key>
 				<true/>
 			</dict>
+			<key>NoDynamicExtract</key>
+			<true/>
+			<key>NoOemTableId</key>
+			<true/>
 		</dict>
 	</dict>
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>keepsyms=1 dart=0 debug=0x100 slide=0 shikigva=40</string>
+		<string>keepsyms=1 dart=0 debug=0x100 slide=0 shiki-id=Mac-7BA5B2D9E42DDD94 darkwake=8 shikigva=32 </string>
 		<key>DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>Timeout</key>
@@ -100,23 +106,26 @@
 		<key>XMPDetection</key>
 		<string>Yes</string>
 	</dict>
-	<key>CPU</key>
-	<dict>
-		<key>Type</key>
-		<string>0x1005</string>
-	</dict>
 	<key>Devices</key>
 	<dict>
 		<key>Audio</key>
 		<dict>
+			<key>AFGLowPowerState</key>
+			<true/>
 			<key>Inject</key>
-			<integer>16</integer>
+			<integer>13</integer>
 			<key>ResetHDA</key>
 			<true/>
 		</dict>
 		<key>USB</key>
 		<dict>
+			<key>AddClockID</key>
+			<true/>
 			<key>FixOwnership</key>
+			<true/>
+			<key>HighCurrent</key>
+			<true/>
+			<key>Inject</key>
 			<true/>
 		</dict>
 	</dict>
@@ -186,7 +195,7 @@
 		<key>BooterConfig</key>
 		<string>0x28</string>
 		<key>CsrActiveConfig</key>
-		<string>0x3E7</string>
+		<string>0x67</string>
 		<key>MLB</key>
 		<string>{{PASTE BOARD SERIAL NUMBER HERE}}</string>
 		<key>ROM</key>
@@ -195,11 +204,11 @@
 	<key>SMBIOS</key>
 	<dict>
 		<key>BiosReleaseDate</key>
-		<string>02/18/2019</string>
+		<string>05/28/2019</string>
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
 		<key>BiosVersion</key>
-		<string>IM191.88Z.F000.B00.1902181222</string>
+		<string>IM191.88Z.F000.B00.1905281819</string>
 		<key>Board-ID</key>
 		<string>Mac-AA95B1DDAB278B95</string>
 		<key>BoardManufacturer</key>
@@ -217,11 +226,11 @@
 		<key>ChassisType</key>
 		<string>0x09</string>
 		<key>EfiVersion</key>
-		<string>220.250.368.0.0</string>
+		<string>220.270.76.0.0</string>
 		<key>Family</key>
 		<string>iMac</string>
 		<key>FirmwareFeatures</key>
-		<string>0xFC0FE137</string>
+		<string>0xFD8FF576</string>
 		<key>FirmwareFeaturesMask</key>
 		<string>0xFF1FFF3F</string>
 		<key>LocationInChassis</key>
