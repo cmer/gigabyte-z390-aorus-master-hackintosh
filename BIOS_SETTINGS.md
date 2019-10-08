@@ -1,8 +1,73 @@
-# BIOS Settings & Overclocking
+# BIOS Settings
 
-Here are the settings I used in my BIOS to overclock my i9 9900k to 5.1GHz. These work perfectly fine on macOS Mojave.
+Here are the minimum BIOS settings you'll need for a fully functional macOS Mojave/Catalina setup.
 
-I set these after loading optimized defaults. I am currently using BIOS version F7.
+Before you start, make sure to upgrade your BIOS to the latest version (I use F8) and **Load Optimized Defaults**.
+
+
+# TODO
+
+
+
+Save & Exit : Load Optimized Defaults
+M.I.T. : Advanced Memory Settings → Extreme Memory Profile(X.M.P.) : Profile1
+BIOS → Fast Boot : Disabled
+BIOS → Windows 8/10 Features : Other OS
+BIOS → LAN PXE Boot Option ROM : Disabled
+BIOS → Storage Boot Option Control : UEFI
+Peripherals → Initial Display Output : IGFX or PCIe 1 Slot
+Peripherals → Super IO Configuration → Serial Port : Disabled
+Peripherals → Network Stack Configuration → Network Stack : Disabled
+Peripherals → USB Configuration → XHCI Hand-off : Enabled
+Chipset → Vt-d : Disabled
+Chipset → Wake on LAN Enable : Disabled
+Press F10 to Save and Exit the BIOS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## M.I.T
+
+### Advanced Frequency Settings
+
+* Extreme Memory Profile (XMP): Profile1
+
+### Advanced Memory Settings
+  * Extreme Memory Profile (XMP): Profile1
+
+## Peripherals
+
+### Super IO Configuration
+
+* Serial Port: Disabled
+
+### USB Configuration
+
+* XHCI Hand-off: Enabled
+
+## Chipset
+
+* Internal Graphics: Disabled
+
+
+# Overclocking
+
+These are the additional settings I used to overclock my i9 9900k to 5.1GHz.
 
 ![Geekbench](images/geekbench.png)
 
@@ -39,25 +104,3 @@ I set these after loading optimized defaults. I am currently using BIOS version 
 
 #### CPU Core Voltage Control
 * CPU Vcore: 1.370V
-
-
-## Peripherals
-
-### Super IO Configuration
-
-* Serial Port: Disabled
-
-### USB Configuration
-
-* XHCI Hand-off: Enabled
-
-## Chipset
-
-* Internal Graphics: Enabled
-* DVMT Pre-Allocated: 128M
-* DVMT Total Gfx Mem: 256M
-
-
-## Power
-
-* AC BACK: Memory
