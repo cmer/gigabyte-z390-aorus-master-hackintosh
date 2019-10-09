@@ -4,51 +4,11 @@ Here are the minimum BIOS settings you'll need for a fully functional macOS Moja
 
 Before you start, make sure to upgrade your BIOS to the latest version (I use F8) and **Load Optimized Defaults**.
 
-
-# TODO
-
-
-
-Save & Exit : Load Optimized Defaults
-M.I.T. : Advanced Memory Settings → Extreme Memory Profile(X.M.P.) : Profile1
-BIOS → Fast Boot : Disabled
-BIOS → Windows 8/10 Features : Other OS
-BIOS → LAN PXE Boot Option ROM : Disabled
-BIOS → Storage Boot Option Control : UEFI
-Peripherals → Initial Display Output : IGFX or PCIe 1 Slot
-Peripherals → Super IO Configuration → Serial Port : Disabled
-Peripherals → Network Stack Configuration → Network Stack : Disabled
-Peripherals → USB Configuration → XHCI Hand-off : Enabled
-Chipset → Vt-d : Disabled
-Chipset → Wake on LAN Enable : Disabled
-Press F10 to Save and Exit the BIOS
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## M.I.T
 
 ### Advanced Frequency Settings
 
 * Extreme Memory Profile (XMP): Profile1
-
-### Advanced Memory Settings
-  * Extreme Memory Profile (XMP): Profile1
 
 ## Peripherals
 
@@ -63,6 +23,7 @@ Press F10 to Save and Exit the BIOS
 ## Chipset
 
 * Internal Graphics: Disabled
+
 
 
 # Overclocking
