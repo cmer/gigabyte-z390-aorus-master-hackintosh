@@ -32,7 +32,6 @@ See my [Hardware List](HARDWARE.md)
 
 
 ##### Not Working
-- iGFX HDMI output during install. Common problem, nobody seems to have found a solution. But I don't need it. (NOTE: this might now be working with 10.14.5 since support for the 9900k is now built in. I haven't tried again since.)
 - Built-in wifi. This will likely never work since it is the new Intel CNVi that MacOS doesn't support.
 - Onboard Bluetooth is hit or miss. However, I disabled it (HS14) because I have a natively supported Broadcom BCM94360CS2 WIFI/BT adapter.
 - Netflix DRM in Safari (works in Chrome)
