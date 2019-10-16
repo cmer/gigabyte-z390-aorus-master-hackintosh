@@ -1,8 +1,8 @@
 # Step by Step Instructions Hackintoshing
 
-These are step by step instructions for a Vanilla install of MacOS Mojave on a Gigabyte Aorus Master Z390 with an Intel i9 9900k CPU.
+These are step by step instructions for a Vanilla install of MacOS Mojave/Catalina on a Gigabyte Aorus Master Z390 with an Intel i9 9900k CPU.
 
-As of May 21, 2019, this guide assumes that you are installing Mojave 10.14.5.
+This guide assumes that you are installing Mojave 10.14.5 or over, or Catalina.
 
 
 ## Setup UEFI/BIOS
@@ -11,8 +11,9 @@ As of May 21, 2019, this guide assumes that you are installing Mojave 10.14.5.
 * Peripherals → USB Configuration → XHCI Hand-off : Enabled
 * Chipset → Internal Graphics : Enabled (important for Quicklook/Preview and hardware acceleration)
     - Please note that we will be using our internal GPU in **headless** mode only and this guide assumes that. This is how an iMac19,1 (what we're basing our build on) behaves.
-    - If you opt to disable Internal Graphics, you will need to use `NoVPAJpeg.kext`. Otherwise, it is not required.
-    - I seriously recommend enabling the iGPU.
+    - I seriously recommend enabling the iGPU. However, if you can't boot and get the error message "Unable to allocate runtime area", you will need to disable the iGPU. Unfortunately, I had to disable it myself.
+    - If you opt to disable Internal Graphics, you will need to use `NoVPAJpeg.kext` to have proper decoding. Otherwise, it is not required and should not be used.
+
 
 You may want to take a look at my [BIOS Settings & Overclocking](BIOS_SETTINGS.md).
 
@@ -42,8 +43,8 @@ Here's a [great explanation of the Clover settings for Coffee Lake](https://hack
 
 
  In **SMBIOS**:
-    - Click the button with an up/down arrow (middle right). Chose `iMac18,3`. This is important since we'll be connecting our monitor to the RX580. The HDMI port on our motherboard is NOT yet working for Hackintoshes.
-    - Make sure the serial number generated is an iMac (mid-2017) by clicking `Model Lookup`.
+    - Click the button with an up/down arrow (middle right). Chose `iMac19,1`. This is important since we'll be connecting our monitor to the RX580. The HDMI port on our motherboard should NOT be used on your Hackintosh.
+    - Make sure the serial number generated is an iMac (Retina 5k, 2019) by clicking `Model Lookup`.
     - Ensure that `Check Coverage` reports that the serial is **NOT** valid. You don't want to use somebody else's serial number.
     - While you're here, copy your Board Serial Number to your clipboard. You'll need it soon.
 * In **Rt Variables**:
@@ -51,24 +52,36 @@ Here's a [great explanation of the Clover settings for Coffee Lake](https://hack
     - <del>Set `CsrActiveConfig` to `0x0` which enables SIP for extra security. This should work just fine for a Vanilla Hackintosh install and is how genuine Macs ship.</del>
     - Set `CsrActiveConfig` to `0x3e7` to disable SIP. This is unfortunately required as of 10.14.5 in order to load unsigned KEXTs.
 * In **Boot**:
-    - Change the `Custom Flags` to: `shikigva=40 uia_exclude=HS14` (this disables onboard Bluetooth since we'll be using an external Broadcom Wi-Fi/Bluetooth adapter)
+    - Make sure you have the following Arguments:
+        - `debug=0x100` -- show debug screen instead of standard kernel panic screen.
+        - `keepsyms=1` -- works with debug=0x100, show symbols on debug screen.
+        - `dart=0` -- disables Intel Virtual Technology.
+        - `slide=0` -- kernel address management.
+        - `darkwake=8` -- sleep management (IgnoreDiskIOAlways).
+        - `shikigva=32` -- video decoding stuff.
+        - `alcid=16` -- this enables your onboard audio. Use `-alcoff` to disable audio.
+        - `-v` -- boot in verbose mode. I personally remove this after my system is stable.
+
 * In **ACPI**:
     - Click `List of Patches` and enable the following:
-        + `Change GFX0 to IGPU`
+        + `change SAT0 to SATA`
+        + `change HECI to IMEI`
+    - In the `Fixes` section, check only the following (careful, there are 2 screens). NOTE: my system works just fine without any fixes.
+        + `FixRTC` -- try if your system hangs at boot time
+        + `FixShutdown` -- only use if you are having shutdown issues (ie: restarts instead of shutdown)
+    - In `Drop Tables`, make sure you have `DMAR` and `MATS`.
+
 * In **Devices**:
-    - Set `Inject` to `16`.
-    - Click `Properties`, select `PciRoot(0x0)/Pci(0x2,0x0)`. Then, click the + button to add a property.
+    - In the `USB` section, check `Inject`, `FixOwnership` and `HighCurrent`.
+    - In the `Audio` section, set `Inject` to `No` and uncheck `AFGLowPowerState` and `ResetHDA`.
+    - If you have enabled your iGPU (otherwise not required), click `Properties`, select `PciRoot(0x0)/Pci(0x2,0x0)`. Then, click the + button to add a property.
       - Add (or update if already present):
           + Property Key: `AAPL,ig-platform-id`
-          + Property Value: `0300923E`
-          + Value Type: `DATA`
-    - If you are installing Mojave 10.14.3 or earlier, you need fake your iGPU id in order to **properly** enable it. This is important but not necessary with 10.14.4 and up.
-      - Add:
-          + Property Key: `device-id`
-          + Property Value: `923E0000`
+          + Property Value: `0300923E` -- iGPU in compute mode
           + Value Type: `DATA`
 
-
+* In **Kernel and Kext Patches**
+    - Remove all patches except `AppleAHCIPort`
 
 * Click the Export Configuration button (bottom left), then Save As `config.plist`.
 * Copy your newly generated `config.plist` to `/EFI/CLOVER/` on your bootable USB key.
@@ -79,8 +92,6 @@ All Kexts should be copied to `/EFI/CLOVER/kexts/Other`. Whenever copying kexts 
 
 We need a few Kexts to get our installation working as it should:
 
-* [USBInjectAll.kext](https://bitbucket.org/RehabMan/os-x-usb-inject-all/downloads/)
-    - This is necessary to exclude our onboard Bluetooth adapter (HS14).
 * [IntelMausiEthernet.kext](https://bitbucket.org/RehabMan/os-x-intel-network/downloads/)
     -  This is for our onboard Ethernet/LAN adapter
 * [Lilu.kext](https://github.com/acidanthera/Lilu/releases)
@@ -89,31 +100,20 @@ We need a few Kexts to get our installation working as it should:
     -  Various patches necessary for certain ATI/AMD/Intel/Nvidia GPUs
 * [VirtualSMC.kext](https://github.com/acidanthera/VirtualSMC/releases)
     - Advanced Apple SMC emulator in the kernel
+    - In addition to `VirtualSMC.kext`, I use `SMCProcessor.kext` (enables temperature monitoring) and `SMCSuperIO.kext` (enables fan speed reading).
 
-## Other Kexts
-
-These are Kexts that I am not using, but that could potentially be useful for you.
+## Other Potential Kexts
 
 * [NoVPAJpeg.kext](https://github.com/vulgo/NoVPAJpeg/releases)
-    - This is a Kext you can use if you are having issues with Quicklook/Preview. iGPU is known to not always work properly on Z390 boards. My iGPU (headless) is working properly and natively, so I don't need this.
+    - Use this only if you haven't enabled your iGPU. I recommend enabling the iGPU instead of this.
 
-
-## Fixing Kernel Panics at Reboot/Shutdown
-
-Because NVRAM is not natively working on my motherboard, we have to use the UEFI driver `EmuVariableUefi-64.efi`. You can install `EmuVariableUefi-64.efi` using Clover Configurator (Install Drivers) or with the Clover installation package (Customize → UEFI Drivers).
-
-When I added `EmuVariableUefi-64.efi` to `/EFI/CLOVER/drivers64UEFI` , I got a crash at bootup.
-
-The solution to that crash is to remove `AptioMemoryFix-64.efi` and to replace it with `OsxAptioFix2Drv-free2000.efi`. You can [download it from here](https://www.dropbox.com/s/d74tdymovdxmlly/OsxAptioFix2Drv-free2000.efi?dl=0).
-
-I am told that there are downsides (that I don't fully understand yet) to using `OsxAptioFix2Drv-free2000`, so do this at your own risk.
-
-I will update this guide when I learn more about all this. Hopefully we can run without these alternative UEFI drivers in the future.
+* [USBInjectAll.kext](https://bitbucket.org/RehabMan/os-x-usb-inject-all/downloads/)
+    - This is necessary to create your own USB SSDT (see below). Otherwise, do not use.
 
 
 ## How to fix all your USB issues.
 
-[Here I made a quick video explaining how to generate your own USB SSDT/kext](https://youtu.be/j3V7szXZZTc). This will fix all your USB issues such as slow speed, drives getting ejected on wake, etc.
+[Here I made a quick video explaining how to generate your own USB SSDT/kext](https://youtu.be/j3V7szXZZTc). This will fix all your USB issues such as slow speed, drives getting ejected on wake, etc. You should **absolutely** either use my `USBMap.kext` file (from my EFI folder), or generate your own. My file will only work with **exactly** the same motherboard model and revision as mine. In doubt, just make your own.
 
 
 
