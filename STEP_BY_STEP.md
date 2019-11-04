@@ -12,7 +12,7 @@ This guide assumes that you are installing Mojave 10.14.5 or over, or Catalina.
 * Chipset → Internal Graphics : Enabled (important for Quicklook/Preview and hardware acceleration)
     - Please note that we will be using our internal GPU in **headless** mode only and this guide assumes that. This is how an iMac19,1 (what we're basing our build on) behaves.
     - I seriously recommend enabling the iGPU. However, if you can't boot and get the error message "Unable to allocate runtime area", you will need to disable the iGPU. Unfortunately, I had to disable it myself.
-    - If you opt to disable Internal Graphics, you will need to use `NoVPAJpeg.kext` to have proper decoding. Otherwise, it is not required and should not be used.
+    - If you opt to disable Internal Graphics with Mojave, you will need to use `NoVPAJpeg.kext` to have proper decoding. It is **not** needed under Catalina. If you have iGPU enabled in Mojave, it is not required and should not be used.
 
 
 You may want to take a look at my [BIOS Settings & Overclocking](BIOS_SETTINGS.md).
@@ -106,6 +106,7 @@ We need a few Kexts to get our installation working as it should:
 
 * [NoVPAJpeg.kext](https://github.com/vulgo/NoVPAJpeg/releases)
     - Use this only if you haven't enabled your iGPU. I recommend enabling the iGPU instead of this.
+    - Note: this kext is **no longer required under Catalina**, but was required with Mojave. If you're on Catalina, do not install it.
 
 * [USBInjectAll.kext](https://bitbucket.org/RehabMan/os-x-usb-inject-all/downloads/)
     - This is necessary to create your own USB SSDT (see below). Otherwise, do not use.
