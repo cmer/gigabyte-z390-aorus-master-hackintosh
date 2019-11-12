@@ -35,7 +35,7 @@ See my [Hardware List](HARDWARE.md)
 - Built-in wifi. This will likely never work since it is the new Intel CNVi that MacOS doesn't support.
 - Onboard Bluetooth is hit or miss. However, I disabled it (HS14) because I have a natively supported Broadcom BCM94360CS2 WIFI/BT adapter.
 - Netflix DRM in Safari (works in Chrome)
-- DRM-protected video in iTunes (ie: purchased TV shows)
+- ~~DRM-protected video in iTunes (ie: purchased TV shows)~~ DRM-protected videos work just fine in the TV app under Catalina.
 
 
 ##### Not Yet Tested
