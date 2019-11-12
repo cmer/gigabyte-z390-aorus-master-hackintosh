@@ -1,6 +1,8 @@
-# Hackintosh Mojave Installation Guide for Gigabyte Z390 Aorus Master
+# Hackintosh Catalina Installation Guide for Gigabyte Z390 Aorus Master
 
 This build is "Vanilla". I used [this guide](https://hackintosh.gitbook.io/-r-hackintosh-vanilla-desktop-guide/) as a starting point.
+
+I assume you are installing Catalina, although most of the instructions also apply for Mojave.
 
 ### Hardware
 
@@ -12,11 +14,10 @@ See my [Hardware List](HARDWARE.md)
 
 ##### Working
 - Ethernet
-- Audio (including digital audio)
+- Onboard Audio (including digital audio)
 - APFS
 - Sleep/Wake
-- Headless iGPU with native support for Quicklook and Preview, and Final Cut Pro X.
-- All USB ports (USB 3 speed working)
+- All USB ports at 3.x speed
 - iMessage
 - App Store
 - Facetime
@@ -28,6 +29,7 @@ See my [Hardware List](HARDWARE.md)
 - AirPlay
 - Continuity
 - Apple Music (iTunes)
+- DRM-protected videos in TV app (not working in Mojave)
 - Power Nap
 
 
@@ -35,7 +37,6 @@ See my [Hardware List](HARDWARE.md)
 - Built-in wifi. This will likely never work since it is the new Intel CNVi that MacOS doesn't support.
 - Onboard Bluetooth is hit or miss. However, I disabled it (HS14) because I have a natively supported Broadcom BCM94360CS2 WIFI/BT adapter.
 - Netflix DRM in Safari (works in Chrome)
-- ~~DRM-protected video in iTunes (ie: purchased TV shows)~~ DRM-protected videos work just fine in the TV app under Catalina.
 
 
 ##### Not Yet Tested
