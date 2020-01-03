@@ -114,6 +114,11 @@ We need a few Kexts to get our installation working as it should:
 * [USBInjectAll.kext](https://bitbucket.org/RehabMan/os-x-usb-inject-all/downloads/)
     - This is necessary to create your own USB SSDT (see below). Otherwise, do not use.
 
+## Post-install step - install Clover to your Hackintosh
+
+* Install Clover on your hackintosh drive, otherwise you can't boot without the installer disk. Make sure you check _Clover to UEFI boot only_.
+* Move the `config.plist` and all the custom kexts from the installer to your EFI. 
+* Remove the `-v` and `debug` options from your `config.plist`.
 
 ## How to fix all your USB issues.
 
