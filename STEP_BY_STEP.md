@@ -101,6 +101,8 @@ We need a few Kexts to get our installation working as it should:
 * [VirtualSMC.kext](https://github.com/acidanthera/VirtualSMC/releases)
     - Advanced Apple SMC emulator in the kernel
     - In addition to `VirtualSMC.kext`, I use `SMCProcessor.kext` (enables temperature monitoring) and `SMCSuperIO.kext` (enables fan speed reading).
+* [AppleALC.kext](https://github.com/acidanthera/AppleALC/releases)
+    - Enables onboard audio
 
 ## Other Potential Kexts
 
