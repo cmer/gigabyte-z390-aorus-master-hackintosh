@@ -59,6 +59,6 @@ See [USB_MAP.md](USB_MAP.md) for a map of all the ports on the Aorus z390 Master
 
 You are welcome to use my EFI folder. However, make sure you set the following:
 
-- SerialNumber
-- BoardSerialNumber
-- SmUUID
+- SystemSerialNumber
+- SystemUUID
+- MLB
