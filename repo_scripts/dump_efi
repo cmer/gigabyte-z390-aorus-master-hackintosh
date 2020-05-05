@@ -16,10 +16,10 @@ if ARGV[0].nil? && !File.exists?(DEFAULT_EFI_VOLUME)
 end
 
 EFI_VOL        = File.expand_path((ARGV[0] || DEFAULT_EFI_VOLUME).strip)
-PLIST_PATH     = File.join(EFI_VOL, 'EFI', 'CLOVER', 'config.plist')
+PLIST_PATH     = File.join(EFI_VOL, 'EFI', 'OC', 'config.plist')
 SCRIPT_PATH    = File.expand_path(File.dirname(__FILE__))
 MY_EFI_PATH    = File.join(SCRIPT_PATH, '..', 'MY EFI')
-NEW_PLIST_PATH = File.join(MY_EFI_PATH, 'CLOVER', 'config.plist')
+NEW_PLIST_PATH = File.join(MY_EFI_PATH, 'OC', 'config.plist')
 
 if !File.exist?(EFI_VOL)
   puts "EFI volume not found: #{ARGV[0]}"
@@ -27,28 +27,14 @@ if !File.exist?(EFI_VOL)
 end
 
 if !File.exist?(PLIST_PATH)
-  puts "Cannot find #{config.plist}. Perhaps the volume doesn't contain Clover?"
+  puts "Cannot find #{config.plist}. Perhaps the volume doesn't contain OpenCore?"
   exit 1
 end
 
 FileUtils.rm_rf MY_EFI_PATH
 FileUtils.cp_r(File.join(EFI_VOL, 'EFI'), MY_EFI_PATH)
 CleanConfig.new(NEW_PLIST_PATH).clean!
-FileUtils.rm File.join(MY_EFI_PATH, 'Clover_Install_Log.txt')
-(FileUtils.rm File.join(MY_EFI_PATH, 'CLOVER', 'misc', 'preboot.log')) rescue nil
-
-# Remove themes
-keep_themes = %w(embedded random logo_main.png pointer-metal.png)
-Dir[File.join(MY_EFI_PATH, 'CLOVER', 'themes', '*')].each do |f|
-  skip = false
-  keep_themes.each do |keep|
-    if f =~ /#{keep}$/
-      skip = true
-      break
-    end
-  end
-
-  FileUtils.rm_r(f) unless skip
-end
+(FileUtils.rm File.join(MY_EFI_PATH, 'opencore-*.txt')) rescue nil
+(FileUtils.rm_r File.join(MY_EFI_PATH, 'OC', 'ACPI', 'decompiled')) rescue nil
 
 puts "Done!"
