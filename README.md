@@ -30,7 +30,8 @@ See my [Hardware List](HARDWARE.md)
 - Continuity
 - ALL DRMs:
   - iTunes Movies (FairPlay 1.x)
-  - Netflix/Amazon Prime (FairPlay 2.x/3.x)
+  - Netflix (FairPlay 2.x/3.x)
+  - Some Amazon Prime content, but not all. (FairPlay 2.x/3.x)
   - Apple TV+ (FairPlay 4.x)
 - Power Nap
 - NVRAM
