@@ -761,7 +761,7 @@
 				Rg==
 				</data>
 				<key>boot-args</key>
-				<string>keepsyms=1 debug=0x100 alcid=11 shikigva=80</string>
+				<string>keepsyms=1 debug=0x100 alcid=16 shikigva=80</string>
 				<key>csr-active-config</key>
 				<data>
 				AAAAAA==
