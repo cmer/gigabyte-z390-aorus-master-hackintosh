@@ -731,6 +731,20 @@
 				<key>Path</key>
 				<string>VerifyMsrE2.efi</string>
 			</dict>
+			<dict>
+				<key>Arguments</key>
+				<string></string>
+				<key>Auxiliary</key>
+				<false/>
+				<key>Comment</key>
+				<string>Toggle the CFG lock</string>
+				<key>Enabled</key>
+				<false/>
+				<key>Name</key>
+				<string>CFGLock</string>
+				<key>Path</key>
+				<string>CFGLock.efi</string>
+			</dict>
 		</array>
 	</dict>
 	<key>NVRAM</key>
