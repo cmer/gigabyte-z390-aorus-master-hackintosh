@@ -25,15 +25,17 @@
 		<key>iMac19,1-XHC</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
-			<string>com.apple.driver.AppleUSBHostMergeProperties</string>
+			<string>com.apple.driver.AppleUSBMergeNub</string>
 			<key>IOClass</key>
-			<string>AppleUSBHostMergeProperties</string>
+			<string>AppleUSBMergeNub</string>
 			<key>IONameMatch</key>
 			<string>XHC</string>
 			<key>IOProviderClass</key>
 			<string>AppleUSBXHCIPCI</string>
 			<key>IOProviderMergeProperties</key>
 			<dict>
+				<key>kUSBMuxEnabled</key>
+				<true/>
 				<key>port-count</key>
 				<data>
 				GgAAAA==
@@ -42,6 +44,8 @@
 				<dict>
 					<key>HS03</key>
 					<dict>
+						<key>Comment</key>
+						<string>Rear USB-A 2</string>
 						<key>UsbConnector</key>
 						<integer>3</integer>
 						<key>port</key>
@@ -51,6 +55,8 @@
 					</dict>
 					<key>HS04</key>
 					<dict>
+						<key>Comment</key>
+						<string>Rear USB-A 3</string>
 						<key>UsbConnector</key>
 						<integer>3</integer>
 						<key>port</key>
@@ -60,6 +66,8 @@
 					</dict>
 					<key>HS05</key>
 					<dict>
+						<key>Comment</key>
+						<string>Rear USB-A 1</string>
 						<key>UsbConnector</key>
 						<integer>3</integer>
 						<key>port</key>
@@ -69,8 +77,10 @@
 					</dict>
 					<key>HS06</key>
 					<dict>
+						<key>Comment</key>
+						<string>Rear USB-C</string>
 						<key>UsbConnector</key>
-						<integer>3</integer>
+						<integer>10</integer>
 						<key>port</key>
 						<data>
 						BgAAAA==
@@ -78,6 +88,8 @@
 					</dict>
 					<key>HS09</key>
 					<dict>
+						<key>Comment</key>
+						<string>Front Panel 1</string>
 						<key>UsbConnector</key>
 						<integer>3</integer>
 						<key>port</key>
@@ -87,6 +99,8 @@
 					</dict>
 					<key>HS10</key>
 					<dict>
+						<key>Comment</key>
+						<string>Front Panel 2</string>
 						<key>UsbConnector</key>
 						<integer>3</integer>
 						<key>port</key>
@@ -96,6 +110,8 @@
 					</dict>
 					<key>HS11</key>
 					<dict>
+						<key>Comment</key>
+						<string>Rear USB 2.0</string>
 						<key>UsbConnector</key>
 						<integer>0</integer>
 						<key>port</key>
@@ -105,8 +121,10 @@
 					</dict>
 					<key>HS12</key>
 					<dict>
+						<key>Comment</key>
+						<string>Internal USB 2</string>
 						<key>UsbConnector</key>
-						<integer>255</integer>
+						<integer>0</integer>
 						<key>port</key>
 						<data>
 						DAAAAA==
@@ -114,8 +132,10 @@
 					</dict>
 					<key>HS13</key>
 					<dict>
+						<key>Comment</key>
+						<string>Internal &amp; Front USB 2</string>
 						<key>UsbConnector</key>
-						<integer>255</integer>
+						<integer>0</integer>
 						<key>port</key>
 						<data>
 						DQAAAA==
@@ -123,6 +143,8 @@
 					</dict>
 					<key>SS03</key>
 					<dict>
+						<key>Comment</key>
+						<string>Rear USB-A 2</string>
 						<key>UsbConnector</key>
 						<integer>3</integer>
 						<key>port</key>
@@ -132,6 +154,8 @@
 					</dict>
 					<key>SS04</key>
 					<dict>
+						<key>Comment</key>
+						<string>Rear USB-A 3</string>
 						<key>UsbConnector</key>
 						<integer>3</integer>
 						<key>port</key>
@@ -141,6 +165,8 @@
 					</dict>
 					<key>SS05</key>
 					<dict>
+						<key>Comment</key>
+						<string>Rear USB-A 1</string>
 						<key>UsbConnector</key>
 						<integer>3</integer>
 						<key>port</key>
@@ -150,8 +176,10 @@
 					</dict>
 					<key>SS06</key>
 					<dict>
+						<key>Comment</key>
+						<string>Rear USB-C</string>
 						<key>UsbConnector</key>
-						<integer>3</integer>
+						<integer>10</integer>
 						<key>port</key>
 						<data>
 						FgAAAA==
@@ -159,6 +187,8 @@
 					</dict>
 					<key>SS09</key>
 					<dict>
+						<key>Comment</key>
+						<string>Front Panel 1</string>
 						<key>UsbConnector</key>
 						<integer>3</integer>
 						<key>port</key>
@@ -168,6 +198,8 @@
 					</dict>
 					<key>SS10</key>
 					<dict>
+						<key>Comment</key>
+						<string>Front Panel 2</string>
 						<key>UsbConnector</key>
 						<integer>3</integer>
 						<key>port</key>

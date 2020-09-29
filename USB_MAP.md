@@ -1,6 +1,6 @@
 # USB Port Map
 
-Here's the USB port map for the Gigabyte Aorus z390 Master I have discovered using the great [USBMap script](https://github.com/corpnewt/USBMap).
+Here's the USB port map for the Gigabyte Aorus Z390 Master I have discovered using the great [USBMap script](https://github.com/corpnewt/USBMap).
 
  * **HS01/SS01:** Front USB-C
  * **HS02/SS02:** Unknown
@@ -16,10 +16,7 @@ Here's the USB port map for the Gigabyte Aorus z390 Master I have discovered usi
  * **HS12:** Internal USB2
  * **HS13:** Internal USB2
  * **HS14:** Bluetooth/Wifi
- * **USR1:** Unknown
- * **USR2:** Unknown
 
- 
 ## Ports I kept enabled:
  * HS03/SS03
  * HS04/SS04
@@ -30,7 +27,7 @@ Here's the USB port map for the Gigabyte Aorus z390 Master I have discovered usi
  * HS11
  * HS12
  * HS13
- 
+
 **Total:** 15 ports
 
 Or in other words, I disabled:
@@ -38,7 +35,8 @@ Or in other words, I disabled:
  * the Front USB-C header
  * HS2 (unknown)
  * Bluetooth/Wifi
- * USR1/USR2 (unknown)
+
+<img src="assets/usb_map.png" alt="my USB map" width="200"/>
 
 ## USB.plist
 

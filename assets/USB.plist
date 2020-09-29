@@ -2,423 +2,657 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>HS01</key>
+	<key>XHC@14000000</key>
 	<dict>
-		<key>controller</key>
-		<string>XHC</string>
-		<key>items</key>
-		<array>
-		</array>
-		<key>name</key>
-		<string>Front USB-C</string>
-		<key>port</key>
-		<integer>1</integer>
-		<key>selected</key>
-		<false/>
-		<key>type</key>
-		<integer>3</integer>
-	</dict>
-	<key>HS02</key>
-	<dict>
-		<key>controller</key>
-		<string>XHC</string>
-		<key>items</key>
-		<array>
-		</array>
-		<key>port</key>
-		<integer>2</integer>
-		<key>selected</key>
-		<false/>
-		<key>type</key>
-		<integer>3</integer>
-	</dict>
-	<key>HS03</key>
-	<dict>
-		<key>controller</key>
-		<string>XHC</string>
-		<key>items</key>
-		<array>
-		</array>
-		<key>name</key>
-		<string>Rear USB3 (red, second from Ethernet)</string>
-		<key>port</key>
-		<integer>3</integer>
-		<key>selected</key>
-		<true/>
-		<key>type</key>
-		<integer>3</integer>
-	</dict>
-	<key>HS04</key>
-	<dict>
-		<key>controller</key>
-		<string>XHC</string>
-		<key>items</key>
-		<array>
-		</array>
-		<key>name</key>
-		<string>Rear USB3 (red, next to Ethernet)</string>
-		<key>port</key>
-		<integer>4</integer>
-		<key>selected</key>
-		<true/>
-		<key>type</key>
-		<integer>3</integer>
-	</dict>
-	<key>HS05</key>
-	<dict>
-		<key>controller</key>
-		<string>XHC</string>
-		<key>items</key>
-		<array>
-		</array>
-		<key>name</key>
-		<string>Rear USB3 (red, next to USB-C)</string>
-		<key>port</key>
-		<integer>5</integer>
-		<key>selected</key>
-		<true/>
-		<key>type</key>
-		<integer>3</integer>
-	</dict>
-	<key>HS06</key>
-	<dict>
-		<key>controller</key>
-		<string>XHC</string>
-		<key>items</key>
-		<array>
-		</array>
-		<key>name</key>
-		<string>Rear USB-C</string>
-		<key>port</key>
-		<integer>6</integer>
-		<key>selected</key>
-		<true/>
-		<key>type</key>
-		<integer>3</integer>
-	</dict>
-	<key>HS07</key>
-	<dict>
-		<key>controller</key>
-		<string>XHC</string>
-		<key>items</key>
-		<array>
-		</array>
-		<key>name</key>
-		<string>Rear USB3 (yellow, next to HDMI)</string>
-		<key>port</key>
-		<integer>7</integer>
-		<key>selected</key>
-		<false/>
-		<key>type</key>
-		<integer>3</integer>
-	</dict>
-	<key>HS08</key>
-	<dict>
-		<key>controller</key>
-		<string>XHC</string>
-		<key>items</key>
-		<array>
-		</array>
-		<key>name</key>
-		<string>Rear USB3 (yellow, second from HDMI)</string>
-		<key>port</key>
-		<integer>8</integer>
-		<key>selected</key>
-		<false/>
-		<key>type</key>
-		<integer>3</integer>
-	</dict>
-	<key>HS09</key>
-	<dict>
-		<key>controller</key>
-		<string>XHC</string>
-		<key>items</key>
-		<array>
-			<string>    - DURGOD Taurus K320</string>
-		</array>
-		<key>name</key>
-		<string>Front USB3</string>
-		<key>port</key>
-		<integer>9</integer>
-		<key>selected</key>
-		<true/>
-		<key>type</key>
-		<integer>3</integer>
-	</dict>
-	<key>HS10</key>
-	<dict>
-		<key>controller</key>
-		<string>XHC</string>
-		<key>items</key>
-		<array>
-			<string>    - USB Receiver</string>
-		</array>
-		<key>name</key>
-		<string>Front USB3</string>
-		<key>port</key>
-		<integer>10</integer>
-		<key>selected</key>
-		<true/>
-		<key>type</key>
-		<integer>3</integer>
-	</dict>
-	<key>HS11</key>
-	<dict>
-		<key>controller</key>
-		<string>XHC</string>
-		<key>items</key>
-		<array>
-			<string>    - USB2.0 Hub</string>
-		</array>
-		<key>name</key>
-		<string>Rear USB2 (all)</string>
-		<key>port</key>
-		<integer>11</integer>
-		<key>selected</key>
-		<true/>
-		<key>type</key>
-		<integer>0</integer>
-	</dict>
-	<key>HS12</key>
-	<dict>
-		<key>controller</key>
-		<string>XHC</string>
-		<key>items</key>
-		<array>
-			<string>    - ITE Device(8595)</string>
-		</array>
-		<key>name</key>
-		<string>Internal USB2</string>
-		<key>port</key>
+		<key>line</key>
+		<string>            XHC@14000000  &lt;class AppleIntelCNLUSBXHCI, id 0x1000002cd</string>
+		<key>indent</key>
 		<integer>12</integer>
-		<key>selected</key>
-		<true/>
-		<key>type</key>
-		<integer>255</integer>
-	</dict>
-	<key>HS13</key>
-	<dict>
-		<key>controller</key>
-		<string>XHC</string>
-		<key>items</key>
-		<array>
-			<string>    - USB2.0 Hub</string>
-			<string>        - USB2.0 Hub</string>
-			<string>        - BRCM20702 Hub</string>
-			<string>            - Bluetooth USB Host Controller</string>
-			<string>        - USB2.0 Hub</string>
-			<string>            - NZXT USB Device</string>
-		</array>
+		<key>id</key>
+		<string>0x1000002cd</string>
 		<key>name</key>
-		<string>Internal USB2</string>
-		<key>port</key>
-		<integer>13</integer>
-		<key>selected</key>
-		<true/>
-		<key>type</key>
-		<integer>255</integer>
-	</dict>
-	<key>HS14</key>
-	<dict>
-		<key>controller</key>
 		<string>XHC</string>
-		<key>items</key>
-		<array>
-		</array>
-		<key>name</key>
-		<string>Bluetooth/WIFI</string>
-		<key>port</key>
-		<integer>14</integer>
-		<key>selected</key>
-		<false/>
 		<key>type</key>
-		<integer>255</integer>
-	</dict>
-	<key>SS01</key>
-	<dict>
-		<key>controller</key>
+		<string>AppleIntelCNLUSBXHCI</string>
+		<key>items</key>
+		<dict/>
+		<key>address</key>
+		<string>14000000</string>
+		<key>ports</key>
+		<dict>
+			<key>01000000</key>
+			<dict>
+				<key>line</key>
+				<string>              HS01@14100000  &lt;class AppleUSB20XHCIPort, id 0x100000311</string>
+				<key>indent</key>
+				<integer>14</integer>
+				<key>id</key>
+				<string>0x100000311</string>
+				<key>name</key>
+				<string>HS01</string>
+				<key>type</key>
+				<string>AppleUSB20XHCIPort</string>
+				<key>items</key>
+				<array/>
+				<key>full_name</key>
+				<string>HS01@14100000</string>
+				<key>address</key>
+				<string>14100000</string>
+				<key>port</key>
+				<string>01000000</string>
+				<key>comment</key>
+				<string>Front USB-C</string>
+				<key>type_override</key>
+				<integer>10</integer>
+			</dict>
+			<key>02000000</key>
+			<dict>
+				<key>line</key>
+				<string>              HS02@14200000  &lt;class AppleUSB20XHCIPort, id 0x100000312</string>
+				<key>indent</key>
+				<integer>14</integer>
+				<key>id</key>
+				<string>0x100000312</string>
+				<key>name</key>
+				<string>HS02</string>
+				<key>type</key>
+				<string>AppleUSB20XHCIPort</string>
+				<key>items</key>
+				<array/>
+				<key>full_name</key>
+				<string>HS02@14200000</string>
+				<key>address</key>
+				<string>14200000</string>
+				<key>port</key>
+				<string>02000000</string>
+			</dict>
+			<key>03000000</key>
+			<dict>
+				<key>line</key>
+				<string>              HS03@14300000  &lt;class AppleUSB20XHCIPort, id 0x100000313</string>
+				<key>indent</key>
+				<integer>14</integer>
+				<key>id</key>
+				<string>0x100000313</string>
+				<key>name</key>
+				<string>HS03</string>
+				<key>type</key>
+				<string>AppleUSB20XHCIPort</string>
+				<key>items</key>
+				<array>
+					<string>    - Disk 2.0</string>
+				</array>
+				<key>full_name</key>
+				<string>HS03@14300000</string>
+				<key>address</key>
+				<string>14300000</string>
+				<key>port</key>
+				<string>03000000</string>
+				<key>enabled</key>
+				<true/>
+				<key>comment</key>
+				<string>Rear USB-A 2</string>
+			</dict>
+			<key>04000000</key>
+			<dict>
+				<key>line</key>
+				<string>              HS04@14400000  &lt;class AppleUSB20XHCIPort, id 0x100000314</string>
+				<key>indent</key>
+				<integer>14</integer>
+				<key>id</key>
+				<string>0x100000314</string>
+				<key>name</key>
+				<string>HS04</string>
+				<key>type</key>
+				<string>AppleUSB20XHCIPort</string>
+				<key>items</key>
+				<array>
+					<string>    - Disk 2.0</string>
+				</array>
+				<key>full_name</key>
+				<string>HS04@14400000</string>
+				<key>address</key>
+				<string>14400000</string>
+				<key>port</key>
+				<string>04000000</string>
+				<key>enabled</key>
+				<true/>
+				<key>comment</key>
+				<string>Rear USB-A 3</string>
+			</dict>
+			<key>05000000</key>
+			<dict>
+				<key>line</key>
+				<string>              HS05@14500000  &lt;class AppleUSB20XHCIPort, id 0x100000315</string>
+				<key>indent</key>
+				<integer>14</integer>
+				<key>id</key>
+				<string>0x100000315</string>
+				<key>name</key>
+				<string>HS05</string>
+				<key>type</key>
+				<string>AppleUSB20XHCIPort</string>
+				<key>items</key>
+				<array>
+					<string>    - Disk 2.0</string>
+				</array>
+				<key>full_name</key>
+				<string>HS05@14500000</string>
+				<key>address</key>
+				<string>14500000</string>
+				<key>port</key>
+				<string>05000000</string>
+				<key>enabled</key>
+				<true/>
+				<key>comment</key>
+				<string>Rear USB-A 1</string>
+			</dict>
+			<key>06000000</key>
+			<dict>
+				<key>line</key>
+				<string>              HS06@14600000  &lt;class AppleUSB20XHCIPort, id 0x100000316</string>
+				<key>indent</key>
+				<integer>14</integer>
+				<key>id</key>
+				<string>0x100000316</string>
+				<key>name</key>
+				<string>HS06</string>
+				<key>type</key>
+				<string>AppleUSB20XHCIPort</string>
+				<key>items</key>
+				<array>
+					<string>    - Disk 2.0</string>
+				</array>
+				<key>full_name</key>
+				<string>HS06@14600000</string>
+				<key>address</key>
+				<string>14600000</string>
+				<key>port</key>
+				<string>06000000</string>
+				<key>enabled</key>
+				<true/>
+				<key>comment</key>
+				<string>Rear USB-C</string>
+				<key>type_override</key>
+				<integer>10</integer>
+			</dict>
+			<key>07000000</key>
+			<dict>
+				<key>line</key>
+				<string>              HS07@14700000  &lt;class AppleUSB20XHCIPort, id 0x100000317</string>
+				<key>indent</key>
+				<integer>14</integer>
+				<key>id</key>
+				<string>0x100000317</string>
+				<key>name</key>
+				<string>HS07</string>
+				<key>type</key>
+				<string>AppleUSB20XHCIPort</string>
+				<key>items</key>
+				<array/>
+				<key>full_name</key>
+				<string>HS07@14700000</string>
+				<key>address</key>
+				<string>14700000</string>
+				<key>port</key>
+				<string>07000000</string>
+			</dict>
+			<key>08000000</key>
+			<dict>
+				<key>line</key>
+				<string>              HS08@14800000  &lt;class AppleUSB20XHCIPort, id 0x100000318</string>
+				<key>indent</key>
+				<integer>14</integer>
+				<key>id</key>
+				<string>0x100000318</string>
+				<key>name</key>
+				<string>HS08</string>
+				<key>type</key>
+				<string>AppleUSB20XHCIPort</string>
+				<key>items</key>
+				<array/>
+				<key>full_name</key>
+				<string>HS08@14800000</string>
+				<key>address</key>
+				<string>14800000</string>
+				<key>port</key>
+				<string>08000000</string>
+			</dict>
+			<key>09000000</key>
+			<dict>
+				<key>line</key>
+				<string>              HS09@14900000  &lt;class AppleUSB20XHCIPort, id 0x100000319</string>
+				<key>indent</key>
+				<integer>14</integer>
+				<key>id</key>
+				<string>0x100000319</string>
+				<key>name</key>
+				<string>HS09</string>
+				<key>type</key>
+				<string>AppleUSB20XHCIPort</string>
+				<key>items</key>
+				<array>
+					<string>    - Disk 2.0</string>
+				</array>
+				<key>full_name</key>
+				<string>HS09@14900000</string>
+				<key>address</key>
+				<string>14900000</string>
+				<key>port</key>
+				<string>09000000</string>
+				<key>enabled</key>
+				<true/>
+				<key>comment</key>
+				<string>Front Panel 1</string>
+			</dict>
+			<key>0a000000</key>
+			<dict>
+				<key>line</key>
+				<string>              HS10@14a00000  &lt;class AppleUSB20XHCIPort, id 0x10000031a</string>
+				<key>indent</key>
+				<integer>14</integer>
+				<key>id</key>
+				<string>0x10000031a</string>
+				<key>name</key>
+				<string>HS10</string>
+				<key>type</key>
+				<string>AppleUSB20XHCIPort</string>
+				<key>items</key>
+				<array>
+					<string>    - Disk 2.0</string>
+				</array>
+				<key>full_name</key>
+				<string>HS10@14a00000</string>
+				<key>address</key>
+				<string>14a00000</string>
+				<key>port</key>
+				<string>0a000000</string>
+				<key>enabled</key>
+				<true/>
+				<key>comment</key>
+				<string>Front Panel 2</string>
+			</dict>
+			<key>0b000000</key>
+			<dict>
+				<key>line</key>
+				<string>              HS11@14b00000  &lt;class AppleUSB20XHCIPort, id 0x10000031b</string>
+				<key>indent</key>
+				<integer>14</integer>
+				<key>id</key>
+				<string>0x10000031b</string>
+				<key>name</key>
+				<string>HS11</string>
+				<key>type</key>
+				<string>AppleUSB20XHCIPort</string>
+				<key>items</key>
+				<array>
+					<string>    - USB2.0 Hub</string>
+					<string>        - Microsoft® Nano Transceiver v2.0</string>
+					<string>        - Disk 2.0</string>
+					<string>        - Ultra</string>
+				</array>
+				<key>full_name</key>
+				<string>HS11@14b00000</string>
+				<key>address</key>
+				<string>14b00000</string>
+				<key>port</key>
+				<string>0b000000</string>
+				<key>enabled</key>
+				<true/>
+				<key>comment</key>
+				<string>Rear USB 2.0</string>
+				<key>type_override</key>
+				<integer>0</integer>
+			</dict>
+			<key>0c000000</key>
+			<dict>
+				<key>line</key>
+				<string>              HS12@14c00000  &lt;class AppleUSB20XHCIPort, id 0x10000031c</string>
+				<key>indent</key>
+				<integer>14</integer>
+				<key>id</key>
+				<string>0x10000031c</string>
+				<key>name</key>
+				<string>HS12</string>
+				<key>type</key>
+				<string>AppleUSB20XHCIPort</string>
+				<key>items</key>
+				<array>
+					<string>    - ITE Device(8595)</string>
+				</array>
+				<key>full_name</key>
+				<string>HS12@14c00000</string>
+				<key>address</key>
+				<string>14c00000</string>
+				<key>port</key>
+				<string>0c000000</string>
+				<key>enabled</key>
+				<true/>
+				<key>comment</key>
+				<string>Internal USB 2</string>
+				<key>type_override</key>
+				<integer>0</integer>
+			</dict>
+			<key>0d000000</key>
+			<dict>
+				<key>line</key>
+				<string>              HS13@14d00000  &lt;class AppleUSB20XHCIPort, id 0x10000031d</string>
+				<key>indent</key>
+				<integer>14</integer>
+				<key>id</key>
+				<string>0x10000031d</string>
+				<key>name</key>
+				<string>HS13</string>
+				<key>type</key>
+				<string>AppleUSB20XHCIPort</string>
+				<key>items</key>
+				<array>
+					<string>    - USB2.0 Hub</string>
+					<string>        - USB2.0 Hub</string>
+					<string>        - BRCM20702 Hub</string>
+					<string>            - Bluetooth USB Host Controller</string>
+					<string>        - USB2.0 Hub</string>
+					<string>            - NZXT USB Device</string>
+					<string>            - Disk 2.0</string>
+					<string>            - Microsoft® Nano Transceiver v2.0</string>
+				</array>
+				<key>full_name</key>
+				<string>HS13@14d00000</string>
+				<key>address</key>
+				<string>14d00000</string>
+				<key>port</key>
+				<string>0d000000</string>
+				<key>enabled</key>
+				<true/>
+				<key>comment</key>
+				<string>Internal &amp; Front USB 2</string>
+				<key>type_override</key>
+				<integer>0</integer>
+			</dict>
+			<key>0e000000</key>
+			<dict>
+				<key>line</key>
+				<string>              HS14@14e00000  &lt;class AppleUSB20XHCIPort, id 0x10000031e</string>
+				<key>indent</key>
+				<integer>14</integer>
+				<key>id</key>
+				<string>0x10000031e</string>
+				<key>name</key>
+				<string>HS14</string>
+				<key>type</key>
+				<string>AppleUSB20XHCIPort</string>
+				<key>items</key>
+				<array/>
+				<key>full_name</key>
+				<string>HS14@14e00000</string>
+				<key>address</key>
+				<string>14e00000</string>
+				<key>port</key>
+				<string>0e000000</string>
+				<key>comment</key>
+				<string>Bluetooth/Wi-Fi</string>
+				<key>type_override</key>
+				<integer>0</integer>
+			</dict>
+			<key>11000000</key>
+			<dict>
+				<key>line</key>
+				<string>              SS01@14f00000  &lt;class AppleUSB30XHCIPort, id 0x10000031f</string>
+				<key>indent</key>
+				<integer>14</integer>
+				<key>id</key>
+				<string>0x10000031f</string>
+				<key>name</key>
+				<string>SS01</string>
+				<key>type</key>
+				<string>AppleUSB30XHCIPort</string>
+				<key>items</key>
+				<array/>
+				<key>full_name</key>
+				<string>SS01@14f00000</string>
+				<key>address</key>
+				<string>14f00000</string>
+				<key>port</key>
+				<string>11000000</string>
+				<key>comment</key>
+				<string>Front USB-C</string>
+				<key>type_override</key>
+				<integer>10</integer>
+			</dict>
+			<key>12000000</key>
+			<dict>
+				<key>line</key>
+				<string>              SS02@14000000  &lt;class AppleUSB30XHCIPort, id 0x100000320</string>
+				<key>indent</key>
+				<integer>14</integer>
+				<key>id</key>
+				<string>0x100000320</string>
+				<key>name</key>
+				<string>SS02</string>
+				<key>type</key>
+				<string>AppleUSB30XHCIPort</string>
+				<key>items</key>
+				<array/>
+				<key>full_name</key>
+				<string>SS02@14000000</string>
+				<key>address</key>
+				<string>14000000</string>
+				<key>port</key>
+				<string>12000000</string>
+			</dict>
+			<key>13000000</key>
+			<dict>
+				<key>line</key>
+				<string>              SS03@14100000  &lt;class AppleUSB30XHCIPort, id 0x100000321</string>
+				<key>indent</key>
+				<integer>14</integer>
+				<key>id</key>
+				<string>0x100000321</string>
+				<key>name</key>
+				<string>SS03</string>
+				<key>type</key>
+				<string>AppleUSB30XHCIPort</string>
+				<key>items</key>
+				<array>
+					<string>    - Ultra</string>
+				</array>
+				<key>full_name</key>
+				<string>SS03@14100000</string>
+				<key>address</key>
+				<string>14100000</string>
+				<key>port</key>
+				<string>13000000</string>
+				<key>enabled</key>
+				<true/>
+				<key>comment</key>
+				<string>Rear USB-A 2</string>
+			</dict>
+			<key>14000000</key>
+			<dict>
+				<key>line</key>
+				<string>              SS04@14200000  &lt;class AppleUSB30XHCIPort, id 0x100000322</string>
+				<key>indent</key>
+				<integer>14</integer>
+				<key>id</key>
+				<string>0x100000322</string>
+				<key>name</key>
+				<string>SS04</string>
+				<key>type</key>
+				<string>AppleUSB30XHCIPort</string>
+				<key>items</key>
+				<array>
+					<string>    - Ultra</string>
+				</array>
+				<key>full_name</key>
+				<string>SS04@14200000</string>
+				<key>address</key>
+				<string>14200000</string>
+				<key>port</key>
+				<string>14000000</string>
+				<key>enabled</key>
+				<true/>
+				<key>comment</key>
+				<string>Rear USB-A 3</string>
+			</dict>
+			<key>15000000</key>
+			<dict>
+				<key>line</key>
+				<string>              SS05@14300000  &lt;class AppleUSB30XHCIPort, id 0x100000323</string>
+				<key>indent</key>
+				<integer>14</integer>
+				<key>id</key>
+				<string>0x100000323</string>
+				<key>name</key>
+				<string>SS05</string>
+				<key>type</key>
+				<string>AppleUSB30XHCIPort</string>
+				<key>items</key>
+				<array>
+					<string>    - Ultra</string>
+				</array>
+				<key>full_name</key>
+				<string>SS05@14300000</string>
+				<key>address</key>
+				<string>14300000</string>
+				<key>port</key>
+				<string>15000000</string>
+				<key>enabled</key>
+				<true/>
+				<key>comment</key>
+				<string>Rear USB-A 1</string>
+			</dict>
+			<key>16000000</key>
+			<dict>
+				<key>line</key>
+				<string>              SS06@14400000  &lt;class AppleUSB30XHCIPort, id 0x100000324</string>
+				<key>indent</key>
+				<integer>14</integer>
+				<key>id</key>
+				<string>0x100000324</string>
+				<key>name</key>
+				<string>SS06</string>
+				<key>type</key>
+				<string>AppleUSB30XHCIPort</string>
+				<key>items</key>
+				<array>
+					<string>    - Ultra</string>
+				</array>
+				<key>full_name</key>
+				<string>SS06@14400000</string>
+				<key>address</key>
+				<string>14400000</string>
+				<key>port</key>
+				<string>16000000</string>
+				<key>enabled</key>
+				<true/>
+				<key>comment</key>
+				<string>Rear USB-C</string>
+				<key>type_override</key>
+				<integer>10</integer>
+			</dict>
+			<key>17000000</key>
+			<dict>
+				<key>line</key>
+				<string>              SS07@14500000  &lt;class AppleUSB30XHCIPort, id 0x100000325</string>
+				<key>indent</key>
+				<integer>14</integer>
+				<key>id</key>
+				<string>0x100000325</string>
+				<key>name</key>
+				<string>SS07</string>
+				<key>type</key>
+				<string>AppleUSB30XHCIPort</string>
+				<key>items</key>
+				<array/>
+				<key>full_name</key>
+				<string>SS07@14500000</string>
+				<key>address</key>
+				<string>14500000</string>
+				<key>port</key>
+				<string>17000000</string>
+			</dict>
+			<key>18000000</key>
+			<dict>
+				<key>line</key>
+				<string>              SS08@14600000  &lt;class AppleUSB30XHCIPort, id 0x100000326</string>
+				<key>indent</key>
+				<integer>14</integer>
+				<key>id</key>
+				<string>0x100000326</string>
+				<key>name</key>
+				<string>SS08</string>
+				<key>type</key>
+				<string>AppleUSB30XHCIPort</string>
+				<key>items</key>
+				<array/>
+				<key>full_name</key>
+				<string>SS08@14600000</string>
+				<key>address</key>
+				<string>14600000</string>
+				<key>port</key>
+				<string>18000000</string>
+			</dict>
+			<key>19000000</key>
+			<dict>
+				<key>line</key>
+				<string>              SS09@14700000  &lt;class AppleUSB30XHCIPort, id 0x100000327</string>
+				<key>indent</key>
+				<integer>14</integer>
+				<key>id</key>
+				<string>0x100000327</string>
+				<key>name</key>
+				<string>SS09</string>
+				<key>type</key>
+				<string>AppleUSB30XHCIPort</string>
+				<key>items</key>
+				<array>
+					<string>    - Ultra</string>
+				</array>
+				<key>full_name</key>
+				<string>SS09@14700000</string>
+				<key>address</key>
+				<string>14700000</string>
+				<key>port</key>
+				<string>19000000</string>
+				<key>enabled</key>
+				<true/>
+				<key>comment</key>
+				<string>Front Panel 1</string>
+			</dict>
+			<key>1a000000</key>
+			<dict>
+				<key>line</key>
+				<string>              SS10@14800000  &lt;class AppleUSB30XHCIPort, id 0x100000328</string>
+				<key>indent</key>
+				<integer>14</integer>
+				<key>id</key>
+				<string>0x100000328</string>
+				<key>name</key>
+				<string>SS10</string>
+				<key>type</key>
+				<string>AppleUSB30XHCIPort</string>
+				<key>items</key>
+				<array>
+					<string>    - Ultra</string>
+				</array>
+				<key>full_name</key>
+				<string>SS10@14800000</string>
+				<key>address</key>
+				<string>14800000</string>
+				<key>port</key>
+				<string>1a000000</string>
+				<key>enabled</key>
+				<true/>
+				<key>comment</key>
+				<string>Front Panel 2</string>
+			</dict>
+		</dict>
+		<key>parent_name</key>
 		<string>XHC</string>
-		<key>items</key>
-		<array>
-		</array>
-		<key>name</key>
-		<string>Front USB-C</string>
-		<key>port</key>
-		<integer>15</integer>
-		<key>selected</key>
-		<false/>
-		<key>type</key>
-		<integer>3</integer>
-	</dict>
-	<key>SS02</key>
-	<dict>
-		<key>controller</key>
-		<string>XHC</string>
-		<key>items</key>
-		<array>
-		</array>
-		<key>port</key>
-		<integer>5</integer>
-		<key>selected</key>
-		<false/>
-		<key>type</key>
-		<integer>3</integer>
-	</dict>
-	<key>SS03</key>
-	<dict>
-		<key>controller</key>
-		<string>XHC</string>
-		<key>items</key>
-		<array>
-		</array>
-		<key>name</key>
-		<string>Rear USB3 (red, second from Ethernet)</string>
-		<key>port</key>
-		<integer>6</integer>
-		<key>selected</key>
-		<true/>
-		<key>type</key>
-		<integer>3</integer>
-	</dict>
-	<key>SS04</key>
-	<dict>
-		<key>controller</key>
-		<string>XHC</string>
-		<key>items</key>
-		<array>
-		</array>
-		<key>name</key>
-		<string>Rear USB3 (red, next to Ethernet)</string>
-		<key>port</key>
-		<integer>7</integer>
-		<key>selected</key>
-		<true/>
-		<key>type</key>
-		<integer>3</integer>
-	</dict>
-	<key>SS05</key>
-	<dict>
-		<key>controller</key>
-		<string>XHC</string>
-		<key>items</key>
-		<array>
-		</array>
-		<key>name</key>
-		<string>Rear USB3 (red, next to USB-C)</string>
-		<key>port</key>
-		<integer>8</integer>
-		<key>selected</key>
-		<true/>
-		<key>type</key>
-		<integer>3</integer>
-	</dict>
-	<key>SS06</key>
-	<dict>
-		<key>controller</key>
-		<string>XHC</string>
-		<key>items</key>
-		<array>
-		</array>
-		<key>name</key>
-		<string>Rear USB-C</string>
-		<key>port</key>
-		<integer>9</integer>
-		<key>selected</key>
-		<true/>
-		<key>type</key>
-		<integer>3</integer>
-	</dict>
-	<key>SS07</key>
-	<dict>
-		<key>controller</key>
-		<string>XHC</string>
-		<key>items</key>
-		<array>
-		</array>
-		<key>name</key>
-		<string>Rear USB3 (yellow, next to HDMI)</string>
-		<key>port</key>
-		<integer>10</integer>
-		<key>selected</key>
-		<false/>
-		<key>type</key>
-		<integer>3</integer>
-	</dict>
-	<key>SS08</key>
-	<dict>
-		<key>controller</key>
-		<string>XHC</string>
-		<key>items</key>
-		<array>
-		</array>
-		<key>name</key>
-		<string>Rear USB3 (yellow, second from HDMI)</string>
-		<key>port</key>
-		<integer>11</integer>
-		<key>selected</key>
-		<false/>
-		<key>type</key>
-		<integer>3</integer>
-	</dict>
-	<key>SS09</key>
-	<dict>
-		<key>controller</key>
-		<string>XHC</string>
-		<key>items</key>
-		<array>
-		</array>
-		<key>name</key>
-		<string>Front USB3</string>
-		<key>port</key>
-		<integer>12</integer>
-		<key>selected</key>
-		<true/>
-		<key>type</key>
-		<integer>3</integer>
-	</dict>
-	<key>SS10</key>
-	<dict>
-		<key>controller</key>
-		<string>XHC</string>
-		<key>items</key>
-		<array>
-		</array>
-		<key>name</key>
-		<string>Front USB3</string>
-		<key>port</key>
-		<integer>13</integer>
-		<key>selected</key>
-		<true/>
-		<key>type</key>
-		<integer>3</integer>
-	</dict>
-	<key>USR1</key>
-	<dict>
-		<key>controller</key>
-		<string>XHC</string>
-		<key>items</key>
-		<array>
-		</array>
-		<key>port</key>
-		<integer>14</integer>
-		<key>selected</key>
-		<false/>
-		<key>type</key>
-		<integer>3</integer>
-	</dict>
-	<key>USR2</key>
-	<dict>
-		<key>controller</key>
-		<string>XHC</string>
-		<key>items</key>
-		<array>
-		</array>
-		<key>port</key>
-		<integer>15</integer>
-		<key>selected</key>
-		<false/>
-		<key>type</key>
-		<integer>3</integer>
+		<key>acpi_path</key>
+		<string>IOACPIPlane:/_SB/PCI0@0/XHC@140000</string>
+		<key>acpi_address</key>
+		<string>0x00140000</string>
 	</dict>
 </dict>
 </plist>
