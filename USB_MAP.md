@@ -36,7 +36,7 @@ Or in other words, I disabled:
  * HS2 (unknown)
  * Bluetooth/Wifi
 
-<img src="assets/usb_map.png" alt="my USB map" width="200"/>
+<img src="images/usb_map.png" alt="my USB map" width="200"/>
 
 ## USB.plist
 
