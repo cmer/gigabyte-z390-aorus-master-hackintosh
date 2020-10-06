@@ -1,0 +1,49 @@
+#!/bin/bash
+
+DOWNLOAD_URL=https://github.com/rlerdorf/OCSanity/archive/master.zip
+OUTPUT_HTML=/tmp/sanity-results.html
+
+which brew > /dev/null 2>&1
+if [ $? -ne 0 ]; then
+    echo "Error: Homebrew is required."
+    exit 1
+fi
+
+which composer > /dev/null 2>&1
+if [ $? -ne 0 ]; then
+    brew install composer > /dev/null 2>&1
+fi
+
+which markdown > /dev/null 2>&1
+if [ $? -ne 0 ]; then
+    brew install markdown > /dev/null 2>&1
+fi
+
+cd /tmp
+rm -f master.zip
+rm -fr OCSanity-master
+rm -f sanity-results.md
+rm -f sanity-results.html
+wget $DOWNLOAD_URL > /dev/null 2>&1
+unzip master.zip > /dev/null 2>&1
+cd OCSanity-master
+composer install > /dev/null 2>&1
+RULES_FILE=`ls -r -l -1 rules/cometlake*.lst | head -1`
+
+HTML=$(cat <<EOF
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+    type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css"
+    type="text/css">
+  <link rel="stylesheet" href="https://opencore.slowgeek.com/main.css" type="text/css">
+
+  <style>
+    li > span.good { display: none; }
+    body { background-color: #fff; margin: 5em;}
+  </style>
+EOF
+)
+
+echo $HTML > $OUTPUT_HTML
+ ./ocs -r $RULES_FILE /Volumes/EFI/EFI/OC/config.plist >> $OUTPUT_HTML
+open $OUTPUT_HTML
