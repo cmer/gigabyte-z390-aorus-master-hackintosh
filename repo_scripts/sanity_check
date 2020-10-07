@@ -14,11 +14,6 @@ if [ $? -ne 0 ]; then
     brew install composer > /dev/null 2>&1
 fi
 
-which markdown > /dev/null 2>&1
-if [ $? -ne 0 ]; then
-    brew install markdown > /dev/null 2>&1
-fi
-
 cd /tmp
 rm -f master.zip
 rm -fr OCSanity-master
