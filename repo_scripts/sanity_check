@@ -2,6 +2,7 @@
 
 DOWNLOAD_URL=https://github.com/rlerdorf/OCSanity/archive/master.zip
 OUTPUT_HTML=/tmp/sanity-results.html
+CONFIG_PATH=/Volumes/EFI/EFI/OC/config.plist
 
 which brew > /dev/null 2>&1
 if [ $? -ne 0 ]; then
@@ -9,6 +10,7 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
+echo "Installing dependencies..."
 which composer > /dev/null 2>&1
 if [ $? -ne 0 ]; then
     brew install composer > /dev/null 2>&1
@@ -39,6 +41,12 @@ HTML=$(cat <<EOF
 EOF
 )
 
-echo $HTML > $OUTPUT_HTML
- ./ocs -r $RULES_FILE /Volumes/EFI/EFI/OC/config.plist >> $OUTPUT_HTML
-open $OUTPUT_HTML
+
+if [ -f "$CONFIG_PATH" ]; then
+  echo $HTML > $OUTPUT_HTML
+  ./ocs -r $RULES_FILE $CONFIG_PATH >> $OUTPUT_HTML
+  open $OUTPUT_HTML
+else
+  echo "OpenCore EFI does not seem to be mounted. Aborting."
+  exit 1
+fi
