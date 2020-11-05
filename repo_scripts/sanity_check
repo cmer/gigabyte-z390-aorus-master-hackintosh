@@ -15,10 +15,12 @@ while [[ "$#" -gt 0 ]]; do
     case $1 in
         -v|--version) VERSION="$2"; shift ;;
         -c|--cpu)     CPU="$2"; shift ;;
+        -f|--force-download)   FORCE_DL=true; shift ;;
         -h|--help)
           echo "Usage:"
           echo "./sanity_check --version 0.6.1  # target a specific version. Defaults to latest version"
           echo "./sanity_check --cpu cometlake  # for specific CPU architecture. Defaults to: '$DEFAULT_CPU'"
+          echo "./sanity_check --force-download # force redownloading OCSanity even if it already exists."
           exit 1 ;;
         *) echo "Unknown parameter passed: $1"; exit 1 ;;
     esac
@@ -45,7 +47,7 @@ if [ $? -ne 0 ]; then
     brew install composer jq > /dev/null 2>&1
 fi
 
-if [ ! -d "/tmp/OCSanity-master" ]; then
+if [ ! -d "/tmp/OCSanity-master" ] || [ "$FORCE_DL" = true ]; then
   echo "Fetching latest OCSanity..."
   cd /tmp
   rm -f master.zip
