@@ -45,16 +45,21 @@ if [ $? -ne 0 ]; then
     brew install composer jq > /dev/null 2>&1
 fi
 
-echo "Fetching latest OCSanity..."
-cd /tmp
-rm -f master.zip
-rm -fr OCSanity-master
-rm -f sanity-results.md
-rm -f sanity-results.html
-wget $DOWNLOAD_URL > /dev/null 2>&1
-unzip master.zip > /dev/null 2>&1
-cd OCSanity-master
-composer install > /dev/null 2>&1
+if [ ! -d "/tmp/OCSanity-master" ]; then
+  echo "Fetching latest OCSanity..."
+  cd /tmp
+  rm -f master.zip
+  rm -fr OCSanity-master
+  rm -f sanity-results.md
+  rm -f sanity-results.html
+  wget $DOWNLOAD_URL > /dev/null 2>&1
+  unzip master.zip > /dev/null 2>&1
+  cd OCSanity-master
+  composer install > /dev/null 2>&1
+else
+  cd /tmp/OCSanity-master
+fi
+
 RULES_FILE=`ls -r -l -1 rules/$CPU${VERSION//.}*.lst | head -1`
 
 HTML=$(cat <<EOF
