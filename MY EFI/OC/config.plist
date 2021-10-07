@@ -55,6 +55,8 @@
 			<false/>
 			<key>ResetLogoStatus</key>
 			<false/>
+			<key>SyncTableIds</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>Booter</key>
@@ -324,6 +326,8 @@
 			<true/>
 			<key>PowerTimeoutKernelPanic</key>
 			<true/>
+			<key>ProvideCurrentCpuInfo</key>
+			<false/>
 			<key>SetApfsTrimTimeout</key>
 			<integer>-1</integer>
 			<key>ThirdPartyDrives</key>
@@ -333,6 +337,8 @@
 		</dict>
 		<key>Scheme</key>
 		<dict>
+			<key>CustomKernel</key>
+			<false/>
 			<key>FuzzyMatch</key>
 			<true/>
 			<key>KernelArch</key>
@@ -401,6 +407,8 @@
 			<true/>
 			<key>AllowSetDefault</key>
 			<true/>
+			<key>AllowToggleSip</key>
+			<false/>
 			<key>ApECID</key>
 			<integer>0</integer>
 			<key>AuthRestart</key>
@@ -439,6 +447,8 @@
 				<string>OpenShell.efi</string>
 				<key>Enabled</key>
 				<true/>
+				<key>Flavour</key>
+				<string>OpenShell:UEFIShell:Shell</string>
 				<key>Name</key>
 				<string>OpenShell.efi</string>
 				<key>Path</key>
@@ -548,7 +558,7 @@
 		<false/>
 		<key>Generic</key>
 		<dict>
-			<key>AdviseWindows</key>
+			<key>AdviseFeatures</key>
 			<false/>
 			<key>MLB</key>
 			<string>{{CHANGE ME}}</string>
@@ -577,7 +587,78 @@
 			<integer>64</integer>
 			<key>Devices</key>
 			<array>
-				<dict/>
+				<dict>
+					<key>AssetTag</key>
+					<string>123456789</string>
+					<key>BankLocator</key>
+					<string>BANK 0</string>
+					<key>DeviceLocator</key>
+					<string>ChannelA-DIMM0</string>
+					<key>Manufacturer</key>
+					<string>Acidanthera</string>
+					<key>PartNumber</key>
+					<string>M00001-16GB</string>
+					<key>SerialNumber</key>
+					<string>AAA000000001</string>
+					<key>Size</key>
+					<integer>16384</integer>
+					<key>Speed</key>
+					<integer>3200</integer>
+				</dict>
+				<dict>
+					<key>AssetTag</key>
+					<string>123456789</string>
+					<key>BankLocator</key>
+					<string>BANK 0</string>
+					<key>DeviceLocator</key>
+					<string>ChannelA-DIMM1</string>
+					<key>Manufacturer</key>
+					<string>Acidanthera</string>
+					<key>PartNumber</key>
+					<string>M00001-16GB</string>
+					<key>SerialNumber</key>
+					<string>AAA000000002</string>
+					<key>Size</key>
+					<integer>16384</integer>
+					<key>Speed</key>
+					<integer>3200</integer>
+				</dict>
+				<dict>
+					<key>AssetTag</key>
+					<string>123456789</string>
+					<key>BankLocator</key>
+					<string>BANK 1</string>
+					<key>DeviceLocator</key>
+					<string>ChannelB-DIMM0</string>
+					<key>Manufacturer</key>
+					<string>Acidanthera</string>
+					<key>PartNumber</key>
+					<string>M00001-16GB</string>
+					<key>SerialNumber</key>
+					<string>AAA000000003</string>
+					<key>Size</key>
+					<integer>16384</integer>
+					<key>Speed</key>
+					<integer>3200</integer>
+				</dict>
+				<dict>
+					<key>AssetTag</key>
+					<string>123456789</string>
+					<key>BankLocator</key>
+					<string>BANK 1</string>
+					<key>DeviceLocator</key>
+					<string>ChannelB-DIMM1</string>
+					<key>Manufacturer</key>
+					<string>Acidanthera</string>
+					<key>PartNumber</key>
+					<string>M00001-16GB</string>
+					<key>SerialNumber</key>
+					<string>AAA000000004</string>
+					<key>Size</key>
+					<integer>16384</integer>
+					<key>Speed</key>
+					<integer>3200</integer>
+				</dict>
 			</array>
 			<key>ErrorCorrection</key>
 			<integer>3</integer>
@@ -626,6 +707,8 @@
 			<string>Builtin</string>
 			<key>CustomDelays</key>
 			<false/>
+			<key>GraphicsInputMirroring</key>
+			<true/>
 			<key>KeyInitialDelay</key>
 			<integer>0</integer>
 			<key>KeySubsequentDelay</key>
@@ -660,9 +743,36 @@
 		<true/>
 		<key>Drivers</key>
 		<array>
-			<string>HfsPlus.efi</string>
-			<string>OpenCanopy.efi</string>
-			<string>OpenRuntime.efi</string>
+			<dict>
+				<key>Arguments</key>
+				<string></string>
+				<key>Comment</key>
+				<string>HfsPlus.efi</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>HfsPlus.efi</string>
+			</dict>
+			<dict>
+				<key>Arguments</key>
+				<string></string>
+				<key>Comment</key>
+				<string>OpenCanopy.efi</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>OpenCanopy.efi</string>
+			</dict>
+			<dict>
+				<key>Arguments</key>
+				<string></string>
+				<key>Comment</key>
+				<string>OpenRuntime.efi</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>OpenRuntime.efi</string>
+			</dict>
 		</array>
 		<key>Input</key>
 		<dict>
@@ -694,7 +804,7 @@
 			<key>ForceResolution</key>
 			<false/>
 			<key>GopPassThrough</key>
-			<false/>
+			<string>Disabled</string>
 			<key>IgnoreTextInGraphics</key>
 			<false/>
 			<key>ProvideConsoleGop</key>
@@ -719,6 +829,8 @@
 			<key>AppleBootPolicy</key>
 			<false/>
 			<key>AppleDebugLog</key>
+			<false/>
+			<key>AppleEg2Info</key>
 			<false/>
 			<key>AppleFramebufferInfo</key>
 			<false/>
@@ -759,6 +871,8 @@
 			<true/>
 			<key>ExitBootServicesDelay</key>
 			<integer>0</integer>
+			<key>ForceOcWriteFlash</key>
+			<false/>
 			<key>ForgeUefiSupport</key>
 			<false/>
 			<key>IgnoreInvalidFlexRatio</key>
