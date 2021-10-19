@@ -2,7 +2,7 @@
 
 Here are the BIOS settings I am using.
 
-Before you start, make sure to upgrade your BIOS to the latest version (I use F11c) and **Load Optimized Defaults**.
+Before you start, make sure to upgrade your BIOS to the latest version (I use F11n) and **Load Optimized Defaults**.
 
 ## M.I.T
 
